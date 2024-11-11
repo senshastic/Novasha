@@ -1,0 +1,240 @@
+/* ==UserStyle==
+@name           Acrylic Modal Zen
+@version        1.0.0
+@description    A new userstyle
+@author         Snesh
+==/UserStyle== */
+
+@-moz-document url-prefix("chrome:") {
+   
+    :root{
+        --arrowpanel-background: rgba(4, 1, 63, 0.465) !important;
+    } 
+    
+    
+        /* ANCHOR [Sidebar Styling] */
+    
+    
+        #zen-sidebar-web-panel {
+            position: relative;
+            background-color: var(--background-secondary, rgba(255, 255, 255, 0.2)) !important; /* Inherit background color or fallback */
+            backdrop-filter: blur(20px) saturate(200%) contrast(95%) brightness(1.15) !important; /* Enhanced acrylic effect */
+            -webkit-backdrop-filter: blur(20px) saturate(200%) contrast(95%) brightness(1.15) !important;
+            color: inherit !important;
+            border-radius: 12px !important; /* Smooth border radius */
+            border: 1px solid rgba(255, 255, 255, 0.15) !important; /* Softer border */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
+            overflow: hidden;
+        }
+    
+        /* Darker base overlay for consistent background */
+        #zen-sidebar-web-panel::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 1, 40, 0.7); /* Darker base overlay */
+            opacity: 0.8; /* Balanced opacity for more depth */
+            z-index: 0;
+            pointer-events: none;
+            border-radius: inherit;
+            backdrop-filter: blur(10px) contrast(110%); /* Additional blur and contrast for layered effect */
+        }
+    
+        /* Lighter gradient overlay for acrylic highlight */
+        #zen-sidebar-web-panel::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05)); /* Subtle highlight */
+            mix-blend-mode: overlay; /* Maintains contrast and depth */
+            opacity: 0.1; /* Subtle opacity for refined acrylic look */
+            z-index: 2;
+            pointer-events: none;
+            border-radius: inherit;
+        }
+    
+    
+        /* ANCHOR [Window Styling] */
+    
+        window[id="zenNewWebPanel"] {
+            position: relative;
+            background-color: var(--background-secondary, rgba(255, 255, 255, 0.2)) !important; /* Inherit background color or fallback */
+            backdrop-filter: blur(20px) saturate(200%) contrast(95%) brightness(1.15) !important; /* Enhanced acrylic effect */
+            -webkit-backdrop-filter: blur(20px) saturate(200%) contrast(95%) brightness(1.15) !important;
+            color: inherit !important;
+            border-radius: 12px !important; /* Smooth border radius */
+            border: 1px solid rgba(255, 255, 255, 0.15) !important; /* Softer border */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
+            overflow: hidden;
+        }
+    
+        /* Darker base overlay for consistent background */
+        window[id="zenNewWebPanel"]::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 1, 40, 0.7); /* Darker base overlay */
+            opacity: 0.8; /* Balanced opacity for more depth */
+            z-index: -2;
+            pointer-events: none;
+            border-radius: inherit;
+            backdrop-filter: blur(10px) contrast(110%); /* Additional blur and contrast for layered effect */
+        }
+    
+        /* Lighter gradient overlay for acrylic highlight */
+        window[id="zenNewWebPanel"]::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05)); /* Subtle highlight */
+            mix-blend-mode: overlay; /* Maintains contrast and depth */
+            opacity: 0.1; /* Subtle opacity for refined acrylic look */
+            z-index: 2;
+            pointer-events: none;
+            border-radius: inherit;
+        }
+    
+        /* ANCHOR [Screenshots-buttons] */
+    
+        screenshots-buttons {
+            position: relative;
+            background-color: var(--background-secondary, rgba(255, 255, 255, 0.2)) !important; /* Inherit background color or fallback */
+            backdrop-filter: blur(20px) saturate(200%) contrast(95%) brightness(1.15) !important; /* Enhanced acrylic effect */
+            -webkit-backdrop-filter: blur(20px) saturate(200%) contrast(95%) brightness(1.15) !important;
+            color: inherit !important;
+            border-radius: 12px !important; /* Smooth border radius */
+            border: 1px solid rgba(255, 255, 255, 0.15) !important; /* Softer border */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
+            overflow: hidden;
+        }
+    
+        /* Darker base overlay for consistent background */
+        screenshots-buttons::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 1, 40, 0.7); /* Darker base overlay */
+            opacity: 0.8; /* Balanced opacity for more depth */
+            z-index: -2;
+            pointer-events: none;
+            border-radius: inherit;
+            backdrop-filter: blur(10px) contrast(110%); /* Additional blur and contrast for layered effect */
+        }
+    
+        /* Lighter gradient overlay for acrylic highlight */
+        screenshots-buttons::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05)); /* Subtle highlight */
+            mix-blend-mode: overlay; /* Maintains contrast and depth */
+            opacity: 0.1; /* Subtle opacity for refined acrylic look */
+            z-index: 2;
+            pointer-events: none;
+            border-radius: inherit;
+        }
+    
+    
+        /* ANCHOR [Panels] */
+    
+    
+        panel,
+        menupopup {
+            position: relative;
+            background-color: var(--background-secondary, rgba(255, 255, 255, 0.2)) !important; /* Inherit background color or fallback */
+            backdrop-filter: blur(20px) saturate(200%) contrast(95%) brightness(1.15) !important; /* Enhanced acrylic effect */
+            -webkit-backdrop-filter: blur(20px) saturate(200%) contrast(95%) brightness(1.15) !important;
+            color: inherit !important;
+            border-radius: 12px !important; /* Smooth border radius */
+            border: 1px solid rgba(255, 255, 255, 0.15) !important; /* Softer border */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
+            overflow: hidden;
+        }
+    
+        /* Darker base overlay for consistent background */
+        panel::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 1, 40, 0.7); /* Darker base overlay */
+            opacity: 0.8; /* Balanced opacity for more depth */
+            z-index: -2;
+            pointer-events: none;
+            border-radius: inherit;
+            backdrop-filter: blur(10px) contrast(110%); /* Additional blur and contrast for layered effect */
+        }
+    
+        /* Lighter gradient overlay for acrylic highlight */
+        panel::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05)); /* Subtle highlight */
+            mix-blend-mode: overlay; /* Maintains contrast and depth */
+            opacity: 0.1; /* Subtle opacity for refined acrylic look */
+            z-index: 2;
+            pointer-events: none;
+            border-radius: inherit;
+        }
+    
+    
+    
+        panelview {
+            background: transparent !important;
+            box-shadow: none !important;
+            border: none !important;
+        }
+        
+    
+        /* ANCHOR [tooltip] */
+    
+        tooltip {
+            background-color: rgba(5, 5, 5, .18) !important;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(100px) saturate(110%);
+            -webkit-backdrop-filter: blur(100px);
+            transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            padding: 5px;
+        }
+    
+    
+        .tabbrowser-tab:hover {
+            margin-left: 10px !important;
+            transition: margin-left 0.2s ease;
+            background-color: transparent;
+        }
+    
+    
+    }
+    
+    
+    
+    /*zenSplitViewModifier
+    
+    
+    toolbarbutton: to buttonHover */

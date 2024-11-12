@@ -1,0 +1,18 @@
+.tabbrowser-tab[zen-essential="true"]:hover,
+toolbarbutton:hover {
+    background-color: rgba(5, 5, 5, 0) !important;
+		border-radius: 12px;
+		box-shadow: 0 8px 15px rgba(0, 0, 0, 0.37);
+		backdrop-filter: blur(100px) saturate(110%);
+		-webkit-backdrop-filter: blur(100px);
+		transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+		transform: translateY(-2px);
+}
+
+#zen-essentials-container{
+    padding: 2px !important;
+}
+
+:root{
+    --button-background-color-hover: transparent !important;
+}

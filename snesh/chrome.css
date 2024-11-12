@@ -22,16 +22,17 @@ IMPORTANT: SET zen.view.experimental-rounded-view in about:config to true for ba
     menupopup,
 dialog[id="window-modal-dialog"],
 .dialogFrame {
-     position: relative;
-     background-color: var(--background-secondary, rgba(31, 26, 68, 0.65)) !important; /* Inherit background color or fallback */
-     -webkit-backdrop-filter: blur(32px) saturate(200%) contrast(95%) brightness(1.15) !important;
-     backdrop-filter: blur(32px) saturate(200%) contrast(95%) brightness(1.15) !important;
-     color: inherit !important;
-     border-radius: 12px !important; /* Smooth border radius */
-     border: 0.2px solid #d0b575 !important; /* Softer border */
-     box-shadow: 0 4px 12px rgba(48, 179, 255, 0.2) !important;
-     overflow: hidden;
- }
+    position: relative;
+    background-color: var(--background-secondary, rgba(31, 26, 68, 0.85)) !important; /* Reduced transparency */
+    backdrop-filter: blur(80px) saturate(130%) contrast(100%) brightness(1.2) !important; /* Enhanced glass effect */
+    color: inherit !important;
+    border-radius: 12px !important; /* Smooth border radius */
+    border: 1px solid rgba(208, 181, 117, 0.6) !important; /* Softer, semi-transparent border */
+    box-shadow: 0 4px 16px rgba(48, 179, 255, 0.3) !important; /* Slightly stronger shadow */
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    overflow: hidden;
+}
+
 
  /* Darker base overlay for consistent background */
  panel::before,
@@ -49,6 +50,7 @@ dialog[id="window-modal-dialog"],
      z-index: -2;
      pointer-events: none;
      border-radius: inherit;
+     border-radius: 12px !important; /* Smooth border radius */
      -webkit-backdrop-filter: blur(32px) saturate(200%) contrast(95%) brightness(1.15) !important;
      backdrop-filter: blur(100px) saturate(110%); /* Additional blur and contrast for layered effect */
  }
@@ -64,6 +66,7 @@ dialog[id="window-modal-dialog"],
      left: 0;
      width: 100%;
      height: 100%;
+     border-radius: 12px !important; /* Smooth border radius */
      -webkit-backdrop-filter: blur(32px) saturate(200%) contrast(95%) brightness(1.15) !important;
      backdrop-filter: blur(100px) saturate(110%);
      background: linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05)); /* Subtle highlight */

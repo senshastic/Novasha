@@ -9,24 +9,26 @@
    
 :root{
     --arrowpanel-background: transparent !important;
+    --toolbar-field-focus-background-color: transparent !important;
 } 
 
  /* ANCHOR [Panels] */
-    
-    
- panel{
+
+ panel,
+dialog[id="window-modal-dialog"] {
      position: relative;
-     background-color: var(--background-secondary, rgba(17, 13, 48, 0.65)) !important; /* Inherit background color or fallback */
+     background-color: var(--background-secondary, rgba(31, 26, 68, 0.65)) !important; /* Inherit background color or fallback */
      backdrop-filter: blur(20px) saturate(200%) contrast(95%) brightness(1.15) !important; /* Enhanced acrylic effect */
      color: inherit !important;
      border-radius: 12px !important; /* Smooth border radius */
-     border: 0.2px solid #d0b575; !important; /* Softer border */
+     border: 0.2px solid #d0b575 !important; /* Softer border */
      box-shadow: 0 4px 12px rgba(48, 179, 255, 0.2) !important;
      overflow: hidden;
  }
 
  /* Darker base overlay for consistent background */
- panel::before {
+ panel::before,
+ dialog[id="window-modal-dialog"]::before {
      content: "";
      position: absolute;
      top: 0;
@@ -42,7 +44,8 @@
  }
 
  /* Lighter gradient overlay for acrylic highlight */
- panel::after {
+ panel::after,
+ dialog[id="window-modal-dialog"]::after {
      content: "";
      position: absolute;
      top: 0;
@@ -57,9 +60,7 @@
      border-radius: inherit;
  }
 
-
-
- panelview, menupopup  {
+ panelview, menupopup, window[id="zenNewWebPanel"]  {
      background: transparent !important;
      box-shadow: none !important;
      border: none !important;

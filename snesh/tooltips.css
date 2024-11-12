@@ -1,0 +1,22 @@
+/* ==UserStyle==
+@name           Acrylic tooltips Zen
+@version        1.0.0
+@description    A new userstyle
+@author         Snesh
+==/UserStyle== */
+
+@-moz-document url-prefix("chrome:") {
+
+/* ANCHOR [tooltip] */
+    
+tooltip {
+    background-color: rgba(5, 5, 5, .18) !important;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(100px) saturate(110%);
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    padding: 5px;
+    border: none !important;
+}
+
+}

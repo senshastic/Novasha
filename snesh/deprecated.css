@@ -1,0 +1,31 @@
+  /* Sidebar - Add Space for URL Bar */
+  #TabsToolbar {
+    padding-top: 38px;
+    margin-top: 8px;
+  }
+
+  #zen-sidebar-top-buttons-customization-target {
+    margin-bottom: 25px !important;
+    padding-bottom: 50px !important;
+  }
+
+
+    /* URL Bar Styling */
+    #urlbar-container {
+      position: fixed !important;
+      top: 42px;
+      left: 6px;
+      width: calc(10% - 17px) !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      z-index: 1;
+    }
+    
+    #zen-appcontent-wrapper {
+      overflow: visible !important;
+    }
+    
+    #navigator-toolbox {
+      padding-top: 38px !important;
+    }
+    

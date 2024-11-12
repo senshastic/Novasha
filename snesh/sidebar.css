@@ -55,4 +55,13 @@
             border-radius: inherit;
         }
 
+
+        #zen-sidebar-web-header{
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important;
+        }
+
+        #zen-sidebar-panels-wrapper{
+            border-top: 1px solid rgba(255, 255, 255, 0.15) !important;
+        }
+
     }

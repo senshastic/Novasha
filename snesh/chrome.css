@@ -3,6 +3,9 @@
 @version        1.0.0
 @description    A new userstyle
 @author         Snesh
+
+
+IMPORTANT: SET zen.view.experimental-rounded-view in about:config to true for backdrop to actually work. 
 ==/UserStyle== */
 
 @-moz-document url-prefix("chrome:") {
@@ -10,15 +13,19 @@
 :root{
     --arrowpanel-background: transparent !important;
     --toolbar-field-focus-background-color: transparent !important;
+    --in-content-page-background: transparent !important;
 } 
 
  /* ANCHOR [Panels] */
 
  panel,
-dialog[id="window-modal-dialog"] {
+    menupopup,
+dialog[id="window-modal-dialog"],
+.dialogFrame {
      position: relative;
      background-color: var(--background-secondary, rgba(31, 26, 68, 0.65)) !important; /* Inherit background color or fallback */
-     backdrop-filter: blur(20px) saturate(200%) contrast(95%) brightness(1.15) !important; /* Enhanced acrylic effect */
+     -webkit-backdrop-filter: blur(32px) saturate(200%) contrast(95%) brightness(1.15) !important;
+     backdrop-filter: blur(32px) saturate(200%) contrast(95%) brightness(1.15) !important;
      color: inherit !important;
      border-radius: 12px !important; /* Smooth border radius */
      border: 0.2px solid #d0b575 !important; /* Softer border */
@@ -28,7 +35,9 @@ dialog[id="window-modal-dialog"] {
 
  /* Darker base overlay for consistent background */
  panel::before,
- dialog[id="window-modal-dialog"]::before {
+    menupopup::before,
+ dialog[id="window-modal-dialog"]::before,
+ .dialogFrame::before {
      content: "";
      position: absolute;
      top: 0;
@@ -40,18 +49,23 @@ dialog[id="window-modal-dialog"] {
      z-index: -2;
      pointer-events: none;
      border-radius: inherit;
-     backdrop-filter: blur(10px) contrast(110%); /* Additional blur and contrast for layered effect */
+     -webkit-backdrop-filter: blur(32px) saturate(200%) contrast(95%) brightness(1.15) !important;
+     backdrop-filter: blur(100px) saturate(110%); /* Additional blur and contrast for layered effect */
  }
 
  /* Lighter gradient overlay for acrylic highlight */
  panel::after,
- dialog[id="window-modal-dialog"]::after {
+ menupopup::after,
+ dialog[id="window-modal-dialog"]::after,
+ .dialogFrame::after {
      content: "";
      position: absolute;
      top: 0;
      left: 0;
      width: 100%;
      height: 100%;
+     -webkit-backdrop-filter: blur(32px) saturate(200%) contrast(95%) brightness(1.15) !important;
+     backdrop-filter: blur(100px) saturate(110%);
      background: linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05)); /* Subtle highlight */
      mix-blend-mode: overlay; /* Maintains contrast and depth */
      opacity: 0.1; /* Subtle opacity for refined acrylic look */
@@ -60,7 +74,7 @@ dialog[id="window-modal-dialog"] {
      border-radius: inherit;
  }
 
- panelview, menupopup, window[id="zenNewWebPanel"]  {
+ panelview, window[id="zenNewWebPanel"]  {
      background: transparent !important;
      box-shadow: none !important;
      border: none !important;

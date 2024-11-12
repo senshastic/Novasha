@@ -28,7 +28,6 @@ dialog[id="window-modal-dialog"],
     color: inherit !important;
     border-radius: 12px !important; /* Smooth border radius */
     border: 1px solid rgba(208, 181, 117, 0.6) !important; /* Softer, semi-transparent border */
-    box-shadow: 0 4px 16px rgba(48, 179, 255, 0.3) !important; /* Slightly stronger shadow */
     transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     overflow: hidden;
 }

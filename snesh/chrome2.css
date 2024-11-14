@@ -12,7 +12,6 @@
     margin-left: 5px !important;
     transition: margin-left 0.4s ease;
     background-color: transparent;
-    font-family: 'Monaspace Xenon' !important;
 }
 
 .tabbrowser-tab:not([zen-essential="true"]) {

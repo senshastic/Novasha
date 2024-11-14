@@ -9,6 +9,34 @@ toolbarbutton:hover {
 		transform: translateY(-2px);
 }
 
+toolbarbutton:not(.subviewbutton){
+	transition: transform 200s ease, margin 200s ease;
+	will-change: transform, margin;
+	
+}
+
+
+toolbar .toolbarbutton-1 {
+	&:not([disabled]) {
+	  &:is([open], [checked]) > :is(.toolbarbutton-icon, .toolbarbutton-text, .toolbarbutton-badge-stack) {
+	background-color: transparent !important;
+	color: inherit;
+	outline-color: var(--toolbarbutton-selected-outline-color);
+}
+	}
+}
+
+toolbar .toolbarbutton-1 {
+	&:not([disabled]) {
+	  &:hover:active > :is(.toolbarbutton-icon, .toolbarbutton-text, .toolbarbutton-badge-stack) {
+		background-color: transparent !important;
+		color: inherit;
+		outline-color: var(--toolbarbutton-active-outline-color);
+	  }
+	}
+  }
+
+
 #zen-essentials-container{
     padding: 2px !important;
 }
@@ -16,3 +44,5 @@ toolbarbutton:hover {
 :root{
     --button-background-color-hover: transparent !important;
 }
+
+/*.subviewbutton*/

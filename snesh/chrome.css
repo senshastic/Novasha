@@ -22,7 +22,7 @@ IMPORTANT: SET zen.view.experimental-rounded-view in about:config to true for ba
     menupopup,
 dialog[id="window-modal-dialog"],
 .dialogFrame {
-    position: relative;
+    position: fixed !important;
     background-color: var(--background-secondary, rgba(31, 26, 68, 0.85)) !important; /* Reduced transparency */
     backdrop-filter: blur(80px) saturate(130%) contrast(100%) brightness(1.2) !important; /* Enhanced glass effect */
     color: inherit !important;

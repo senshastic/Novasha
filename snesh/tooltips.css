@@ -7,43 +7,17 @@
 
 @-moz-document url-prefix("chrome:") {
 
-/* ANCHOR [tooltip] */
+    /* ANCHOR [tooltip] */
+        
+    tooltip,
+    .tooltip-label {
+        background-color: rgba(5, 5, 5, .18) !important;
+        border-radius: 12px !important;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(100px) saturate(110%);
+        transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        padding: 5px;
+        border: none !important;
+    }
     
-.tooltip-label {
-    position: relative !important;
-    z-index: 1000 !important; /* Bring it to the front */
-    display: block; /* Ensure it remains a block element */
-    width: 100%; /* Adjust width as needed */
-    padding: 10px; /* Adjust padding if needed */
-}
-
-.tooltip-label {
-    transform: scale(1.2); /* Adjust scale as needed */
-    transform-origin: center;
-}
-
-.tooltip-label::before {
-    content: '';
-    position: absolute;
-    top: -10px; /* Expand upward */
-    left: -10px; /* Expand leftward */
-    right: -10px; /* Expand rightward */
-    bottom: -10px; /* Expand downward */
-    background-color: rgba(5, 5, 5, .18); /* Match the background */
-    border-radius: 12px;
-    z-index: -1; /* Ensure it's behind the label */
-}
-
-.tooltip-label {
-    margin: -10px !important; /* Adjust to make it larger */
-}
-
-tooltip {
-    overflow: visible !important; /* Allow label to extend */
-}
-
-
-
-
-
-}
+    }

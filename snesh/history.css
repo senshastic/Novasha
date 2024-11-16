@@ -1,0 +1,48 @@
+/* ==UserStyle==
+@name           Acrylic History SideBar
+@version        1.1.0
+@description    Styling for history sidebar
+@author         FallenStar
+==/UserStyle== */
+
+@-moz-document url-prefix("chrome:") {
+
+    /* ANCHOR [Sidebar Styling] */
+
+    #sidebar-box {
+        background-color       : rgba(0, 0, 0, 0.33) !important;
+        backdrop-filter        : blur(20px) !important;
+        -webkit-backdrop-filter: blur(20px) !important;
+        border-radius          : 6px !important;
+        position               : fixed !important;
+        top                    : 0px !important;
+        left                   : 1px !important;
+        /* space for bottom vignette */
+        height                 : 99.5% !important;
+        z-index                : 1000 !important;
+        box-shadow             : 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+        resize                 : horizontal !important;
+
+    }
+
+    .sidebar-panel {
+        background-color       : transparent !important;
+        backdrop-filter        : blur(20px) !important;
+        -webkit-backdrop-filter: blur(20px) !important;
+    }
+
+    #sidebar-splitter {
+        margin : 0px !important;
+        display: none;
+    }
+
+    #viewButton,
+    .textbox-search-sign {
+        background-color       : transparent !important;
+        backdrop-filter        : blur(20px) !important;
+        -webkit-backdrop-filter: blur(20px) !important;
+        border-radius          : 6px !important;
+    }
+
+    /*Cant style search input cause shadow element garbage */
+}

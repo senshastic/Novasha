@@ -1,2 +1,3 @@
-- Hover bookmark + sidebar 
+- Hover effect bookmark + sidebar 
 - Fix tooltips on mac 
+- Allow changing colors for everything (snesh)

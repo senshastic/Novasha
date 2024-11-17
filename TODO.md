@@ -1,0 +1,2 @@
+- Hover bookmark + sidebar 
+- Fix tooltips on mac 

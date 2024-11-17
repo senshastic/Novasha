@@ -1,0 +1,15 @@
+/* ==UserStyle==
+@name           ulrbarButtons transparent background
+@version        1.0.0
+@description    make the ugly grey background transparent
+@author         FallenStar
+==/UserStyle== */
+
+.identity-box-button {
+    background: transparent !important;
+}
+
+/* split between all elements instead cause permissions are a single block */
+/* .identity-box-button:hover {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3) !important;
+} */

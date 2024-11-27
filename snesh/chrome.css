@@ -18,26 +18,19 @@ IMPORTANT: SET zen.view.experimental-rounded-view in about:config to true for ba
 
  /* ANCHOR [Panels] */
 
- panel,
-    menupopup,
-dialog[id="window-modal-dialog"],
-.dialogFrame {
+ panel {
     position: fixed !important;
-    background-color: var(--background-secondary, rgba(31, 26, 68, 0.85)) !important; /* Reduced transparency */
-    backdrop-filter: blur(80px) saturate(130%) contrast(100%) brightness(1.2) !important; /* Enhanced glass effect */
+    background-color: var(--background-secondary, rgba(31, 26, 68, 0.85)) !important;
+    backdrop-filter: blur(80px) saturate(130%) contrast(100%) brightness(1.2) !important; 
     color: inherit !important;
-    border-radius: 12px !important; /* Smooth border radius */
-    border: 1px solid rgba(208, 181, 117, 0.6) !important; /* Softer, semi-transparent border */
+    border-radius: 12px !important;
+    border: 1px solid rgba(208, 181, 117, 0.6) !important; 
     transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     overflow: hidden;
 }
 
-
  /* Darker base overlay for consistent background */
- panel::before,
-    menupopup::before,
- dialog[id="window-modal-dialog"]::before,
- .dialogFrame::before {
+panel::before {
      content: "";
      position: absolute;
      top: 0;
@@ -55,10 +48,7 @@ dialog[id="window-modal-dialog"],
  }
 
  /* Lighter gradient overlay for acrylic highlight */
- panel::after,
- menupopup::after,
- dialog[id="window-modal-dialog"]::after,
- .dialogFrame::after {
+ panel::after {
      content: "";
      position: absolute;
      top: 0;

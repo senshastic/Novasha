@@ -1,5 +1,5 @@
 #urlbar-background {
   background-color: var(--background-secondary, rgba(31, 26, 68, 0.65)) !important; /* Inherit background color or fallback */
-  backdrop-filter: blur(50px) !important; /* Enhanced acrylic effect */
+  backdrop-filter: blur(50px) !important; 
   box-shadow: inset 0 0px 5px rgba(255, 255, 255, 0.6);
 }

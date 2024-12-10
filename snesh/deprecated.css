@@ -37,6 +37,16 @@
 @author         Snesh
 ==/UserStyle== */
 
+
+appearance: none;
+        padding: var(--space-small);
+        border: 1px solid var(--input-border-color);
+        border-radius: var(--border-radius-small);
+        margin: 0;
+        background-color: var(--input-bgcolor, Field);
+        color: var(--input-color, FieldText); 
+
+        
 @-moz-document url-prefix("chrome:") {
 
   /* ANCHOR [tooltip] */

@@ -139,9 +139,8 @@ IMPORTANT: SET zen.view.experimental-rounded-view in about:config to true for ba
         margin-top: 2px !important;
         margin-bottom: 1px !important;
         margin-inline: 2px !important;
-        border: 2px solid
-            color-mix(in srgb, var(--tab-group-color) 50%, transparent) !important;
-    
+        border: none !important;
+        box-shadow: inset 0 0px 5px color-mix(in srgb, var(--tab-group-color-invert) 50%, transparent) !important;
         & .tab-group-label-container {
             margin-inline: 0px !important;
             width: 100%;
@@ -161,19 +160,23 @@ IMPORTANT: SET zen.view.experimental-rounded-view in about:config to true for ba
                 max-width: 100% !important;
                 padding-top: 5px !important;
                 padding-bottom: 6px !important;
+                margin-top: -5px !important;
                 padding-inline: 0.9em !important;
                 background: transparent !important;
                 border: unset !important;
                 font-weight: 600 !important;
                 text-align: unset !important;
                 color: var(--sidebar-text-color) !important;
+                font-family: 'CC Wild Words' !important;
             }
         }
     
         & tab {
             opacity: 1 !important;
             font-size: 1 !important;
-            max-height: 2.5em !important;
+            max-height: 3em !important;
+            padding: 5px !important;
+            margin-bottom: 10px !important;
             transition:
                 font-size 0.25s,
                 margin 0.25s,
@@ -184,6 +187,13 @@ IMPORTANT: SET zen.view.experimental-rounded-view in about:config to true for ba
         &[collapsed] {
             height: auto !important;
             overflow: hidden !important;
+
+            /*NOTE - Put this in the hover tabs animations mod */
+            
+            &:hover{
+                margin-left: 5px !important;
+                transition: margin-left 0.4s ease;
+            }
     
             & .tab-group-label-container {
                 &:after {

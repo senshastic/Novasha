@@ -8,257 +8,181 @@
 IMPORTANT: SET zen.view.experimental-rounded-view in about:config to true for backdrop to actually work. 
 ==/UserStyle== */
 
-   
-    tab-group {
-        display: grid !important;
-        background: color-mix(in srgb, var(--tab-group-color-invert) 10%, transparent) !important;
-        border-radius: var(--border-radius-medium);
-        margin-bottom: 4px;
-        margin-inline: 2px !important;
-        border: 2px solid color-mix(in srgb, var(--tab-group-color-invert) 10%, transparent);
-        padding: 5px 0px !important;
-        max-height: 1000px !important;
-        transition: max-height 0.2s ease !important;
-      
-        & tab {
-          transition: opacity 0.5s ease !important;
-        }
-      
-        &>vbox {
-          padding-top: 2px !important;
-        }
-      
-        & .tab-group-label-container {
-          &:after {
-            display: none !important;
-          }
-      
-          &>label {
-            background: transparent !important;
-            border: unset !important;
-            font-weight: 500 !important;
-            text-align: unset !important;
-            color: var(--sidebar-text-color) !important;
-          }
-        }
-      
-        &[collapsed] {
-          overflow: hidden !important;
-          max-height: 3rem !important;
-      
-          & tab {
-            opacity: 0 !important;
-          }
-        }
+tab-group {
+    display: grid !important;
+    background: color-mix(in srgb, var(--tab-group-color-invert) 10%, transparent) !important;
+    border-radius: var(--border-radius-medium);
+    margin-bottom: 4px;
+    margin-inline: 2px !important;
+    border: 2px solid color-mix(in srgb, var(--tab-group-color-invert) 10%, transparent);
+    padding: 5px 0px !important;
+    max-height: 1000px !important;
+    transition: max-height 0.2s ease !important;
+  
+    & tab {
+      transition: opacity 0.5s ease !important;
+    }
+  
+    &>vbox {
+      padding-top: 2px !important;
+    }
+  
+    & .tab-group-label-container {
+      &:after {
+        display: none !important;
       }
-    
-    
-      /* Scrolling title and domain in tab previews */
-    .tabbrowser-tab .tab-close-button {
-        visibility: collapse !important;
+  
+      &>label {
+        background: transparent !important;
+        border: unset !important;
+        font-weight: 500 !important;
+        text-align: unset !important;
+        color: var(--sidebar-text-color) !important;
+      }
     }
-    
-    #tab-preview-panel {
-        --panel-background: color-mix(
-            in srgb,
-            var(--arrowpanel-background),
-            transparent 10%
-        ) !important;
-        z-index: 4000000 !important;
+  
+    &[collapsed] {
+      overflow: hidden !important;
+      max-height: 3rem !important;
+  
+      & tab {
+        opacity: 0 !important;
+      }
     }
-    
-    .tab-preview-uri {
-        scroll-behavior: smooth !important;
-        color: var(--text-color-deemphasized);
-        overflow: hidden;
-        white-space: nowrap;
-        animation: marquee-h 10s ease-in-out infinite;
-    
-        position: relative !important;
-        display: inline-block;
-        left: 0;
-    
-        font-size: 12px;
-        font-weight: 400;
-        padding: 2px;
-    }
-    
-    @keyframes marquee-h {
-        0%,
-        20%,
-        80%,
-        100% {
-            transform: translateX(0px);
-        }
-        40%,
-        60% {
-            transform: translateX(calc(-1 * max(0px, 100% - 266px)));
-        }
-    }
-    
-    .tab-preview-title-text {
-        width: 100%;
-        line-height: 1.42;
-        max-height: 2lh;
-        overflow: hidden !important;
-        padding: 2px;
-    }
-    
-    .tab-preview-title {
-        line-height: 1.42;
-        scroll-behavior: smooth !important;
-        overflow: hidden !important;
-        font-weight: var(--font-weight-bold);
-        white-space: break-spaces !important;
-        display: inline-block !important;
-        animation: marquee-v 10s ease-in-out infinite;
-    }
-    
-    @keyframes marquee-v {
-        0%,
-        20%,
-        80%,
-        100% {
-            transform: translateY(0px);
-        }
-        40%,
-        60% {
-            transform: translateY(calc(-1 * max(0px, 100% - 2lh)));
-        }
-    }
-    
-    /* Animated FF tab groups */
-    tab-group {
-        display: grid !important;
-        background: color-mix(
-            in srgb,
-            var(--tab-group-color-invert) 12%,
-            transparent
-        ) !important;
-        border-radius: calc(var(--border-radius-medium) + 2px) !important;
-        margin-top: 2px !important;
-        margin-bottom: 1px !important;
-        margin-inline: 2px !important;
-        border: none !important;
-        box-shadow: inset 0 0px 5px color-mix(in srgb, var(--tab-group-color-invert) 50%, transparent) !important;
-        & .tab-group-label-container {
-            margin-inline: 0px !important;
-            width: 100%;
-    
-            &:after {
-                padding: 0px !important;
-                transform: scaleX(1) !important;
-                background-color: color-mix(
-                    in srgb,
-                    var(--tab-group-color) 50%,
-                    transparent
-                ) !important;
-                transition: transform 0.2s ease-out !important;
-            }
-    
-            & > label {
-                max-width: 100% !important;
-                padding-top: 5px !important;
-                padding-bottom: 6px !important;
-                margin-top: -5px !important;
-                padding-inline: 0.9em !important;
-                background: transparent !important;
-                border: unset !important;
-                font-weight: 600 !important;
-                text-align: unset !important;
-                color: var(--sidebar-text-color) !important;
-                font-family: 'CC Wild Words' !important;
-            }
-        }
-    
-        & tab {
-            opacity: 1 !important;
-            font-size: 1 !important;
-            max-height: 3em !important;
-            padding: 5px !important;
-            margin-bottom: 10px !important;
-            transition:
-                font-size 0.25s,
-                margin 0.25s,
-                padding 0.25s,
-                opacity 0.25s !important;
-        }
-    
-        &[collapsed] {
-            height: auto !important;
-            overflow: hidden !important;
+  }
 
-            /*NOTE - Put this in the hover tabs animations mod */
-            
-            &:hover{
-                margin-left: 5px !important;
-                transition: margin-left 0.4s ease;
-            }
-    
-            & .tab-group-label-container {
-                &:after {
-                    content: "" !important;
-                    height: 2px !important;
-                    position: absolute !important;
-                    inset: auto 0 0 !important;
-                    transform: scaleX(0) !important;
-                    transition: transform 0.2s ease-in !important;
-                }
-            }
-    
-            & tab {
-                display: flex !important;
-                opacity: 0 !important;
-                padding: 0 !important;
-                font-size: 0 !important;
-                margin: 0 !important;
-                transition:
-                    opacity 0.25s ease-in,
-                    font-size 0.25s ease-out,
-                    margin 0.25s ease-out,
-                    padding 0.25s ease-out !important;
-            }
-        }
-    }
-    
-    .tabbrowser-tab[zen-essential="true"] {
-        &[class^="identity-color-"] > .tab-stack > .tab-background {
+
+/* Animated FF tab groups */
+tab-group {
+    display: grid !important;
+    background: color-mix(
+        in srgb,
+        var(--tab-group-color-invert) 12%,
+        transparent
+    ) !important;
+    border-radius: calc(var(--border-radius-medium) + 2px) !important;
+    margin-top: 2px !important;
+    margin-bottom: 1px !important;
+    margin-inline: 2px !important;
+    border: none !important;
+    box-shadow: inset 0 0px 5px color-mix(in srgb, var(--tab-group-color-invert) 50%, transparent) !important;
+    & .tab-group-label-container {
+        margin-inline: 0px !important;
+        width: 100%;
+
+        &:after {
+            padding: 0px !important;
+            transform: scaleX(1) !important;
             background-color: color-mix(
                 in srgb,
-                var(--identity-tab-color),
-                transparent 87%
+                var(--tab-group-color) 50%,
+                transparent
             ) !important;
-    
-            > .tab-context-line {
-                display: none !important;
-            }
+            transition: transform 0.2s ease-out !important;
         }
-        &[class^="identity-color-"][selected] > .tab-stack > .tab-background {
-            background: linear-gradient(
-                color-mix(
-                    in srgb,
-                    var(--identity-tab-color),
-                    var(--tab-selected-bgcolor) 85%
-                ),
-                var(--tab-selected-bgcolor)
-            ) !important;
-            border: 1px solid
-                color-mix(in srgb, var(--identity-tab-color), transparent 50%) !important;
-            box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.1) !important;
+
+        & > label {
+            max-width: 100% !important;
+            padding-top: 5px !important;
+            padding-bottom: 6px !important;
+            margin-top: -5px !important;
+            padding-inline: 0.9em !important;
+            background: transparent !important;
+            border: unset !important;
+            font-weight: 600 !important;
+            text-align: unset !important;
+            color: var(--sidebar-text-color) !important;
+            font-family: 'CC Wild Words' !important;
         }
     }
-    
+
+    & tab {
+        opacity: 1 !important;
+        font-size: 1 !important;
+        max-height: 4em !important;
+        margin-bottom: 8px !important;
+        transition:
+            font-size 0.25s,
+            margin 0.25s,
+            padding 0.25s,
+            opacity 0.25s !important;
+    }
+
+    &[collapsed] {
+        height: auto !important;
+        overflow: hidden !important;
+
+        /*NOTE - Put this in the hover tabs animations mod */
+        
+        &:hover{
+            margin-left: 5px !important;
+            transition: margin-left 0.4s ease;
+        }
+
+        & .tab-group-label-container {
+            &:after {
+                content: "" !important;
+                height: 2px !important;
+                position: absolute !important;
+                inset: auto 0 0 !important;
+                transform: scaleX(0) !important;
+                transition: transform 0.2s ease-in !important;
+            }
+        }
+
+        & tab {
+            display: flex !important;
+            opacity: 0 !important;
+            padding: 0 !important;
+            font-size: 0 !important;
+            margin: 0 !important;
+            transition:
+                opacity 0.25s ease-in,
+                font-size 0.25s ease-out,
+                margin 0.25s ease-out,
+                padding 0.25s ease-out !important;
+        }
+    }
+}
+
+.tabbrowser-tab[zen-essential="true"] {
+    &[class^="identity-color-"] > .tab-stack > .tab-background {
+        background-color: color-mix(
+            in srgb,
+            var(--identity-tab-color),
+            transparent 87%
+        ) !important;
+
+        > .tab-context-line {
+            display: none !important;
+        }
+    }
+    &[class^="identity-color-"][selected] > .tab-stack > .tab-background {
+        background: linear-gradient(
+            color-mix(
+                in srgb,
+                var(--identity-tab-color),
+                var(--tab-selected-bgcolor) 85%
+            ),
+            var(--tab-selected-bgcolor)
+        ) !important;
+        border: 1px solid
+            color-mix(in srgb, var(--identity-tab-color), transparent 50%) !important;
+        box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.1) !important;
+    }
+}
 
 
-    html|input:where(:not([type="radio" i], [type="checkbox" i], [type="range" i])), html|textarea {
-        background-color: rgba(5, 5, 5, .18) !important;
-        border-radius: 12px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(100px) saturate(110%);
-        -webkit-backdrop-filter: blur(100px);
-        transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-        padding: 5px;
-      }
+
+html|input:where(:not([type="radio" i], [type="checkbox" i], [type="range" i])), html|textarea {
+    background-color: rgba(5, 5, 5, .18) !important;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(100px) saturate(110%);
+    -webkit-backdrop-filter: blur(100px);
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    padding: 5px;
+  }  
 
 
  /* ANCHOR [Panels] */
@@ -271,7 +195,9 @@ IMPORTANT: SET zen.view.experimental-rounded-view in about:config to true for ba
     --input-border-color: rgba(208, 181, 117, 0.5) !important;
 } 
 
-panel {
+panel,
+menupopup,
+dialog[id="window-modal-dialog"] {
     position: fixed !important;
     background: 
         linear-gradient(109.6deg, rgba(8, 19, 54, 0.95) 0%, rgba(26, 58, 102, 0.95) 25%, rgba(43, 1, 91, 0.95) 50%, rgba(122, 2, 54, 0.95) 100%), 
@@ -291,7 +217,15 @@ panel {
     transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-panel::after {
+menupopup, panel {
+    &::part(content) {
+    background: red !important;
+    }
+    }
+
+panel::after,
+menupopup::after,
+dialog[id="window-modal-dialog"]::after  {
     content: "";
     position: absolute;
     top: 0;
@@ -307,7 +241,54 @@ panel::after {
 
 
 
+.dialogBox {
+    &:not(.spotlightBox) {
+	box-shadow: none !important;
+	border-radius: 8px;
+}
+}
 
+input[type="email"],
+input[type="tel"],
+input[type="text"],
+input[type="password"],
+input[type="url"],
+input[type="number"],
+button[default],
+richlistbox,
+tree {
+    background-color: rgba(5, 5, 5, .18) !important;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(100px) saturate(110%);
+    -webkit-backdrop-filter: blur(100px);
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    padding: 5px;
+    border: 1px solid rgba(208, 181, 117, 0.5) !important;
+  } 
+
+
+  button[default],
+  menuitem:not([disabled="true"])[selected="true"] {
+      background-color: rgba(5, 5, 5, .18) !important;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(100px) saturate(110%);
+      -webkit-backdrop-filter: blur(100px);
+      transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      padding: 5px;
+      border: none !important;
+    } 
+
+  /* ANCHOR [Panels] */
+
+  :root{
+    --arrowpanel-background: transparent !important;
+    --toolbar-field-focus-background-color: transparent !important;
+    --in-content-page-background: transparent !important;
+    --input-bgcolor: transparent !important;
+    --input-border-color: rgba(208, 181, 117, 0.5) !important;
+}
 
 
 panel toolbarseparator {

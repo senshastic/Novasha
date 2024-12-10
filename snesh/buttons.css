@@ -1,5 +1,7 @@
 
-toolbarbutton:hover {
+toolbarbutton:hover,
+button:not([disabled="true"]):hover,
+menulist:not([disabled="true"]):hover {
     background-color: rgba(5, 5, 5, 0) !important;
 		border-radius: 12px;
 		box-shadow: 0 8px 15px rgba(0, 0, 0, 0.37);

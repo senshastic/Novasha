@@ -5,7 +5,6 @@
 @author         Snesh
 ==/UserStyle== */
 
-@-moz-document url-prefix("chrome:") {
 
     /* ANCHOR [tooltip] */
     tooltip,
@@ -33,4 +32,4 @@
         border          : none !important;
       }
 
-}
+

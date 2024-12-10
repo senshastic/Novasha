@@ -7,3 +7,7 @@
 #urlbar [focused] > #urlbar-background{
     box-shadow: inset 0 0px 5px rgba(255, 255, 255, 0.6) !important;
 }
+
+#urlbar-container{
+    background: transparent !important;
+}

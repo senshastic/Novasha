@@ -5,7 +5,6 @@
 @author         FallenStar
 ==/UserStyle== */
 
-@-moz-document url-prefix("chrome:") {
 
     /* ANCHOR [Sidebar Styling] */
 
@@ -45,4 +44,3 @@
     }
 
     /*Cant style search input cause shadow element garbage */
-}

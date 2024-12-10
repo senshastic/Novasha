@@ -5,7 +5,7 @@
 @author         Snesh
 ==/UserStyle== */
 
-@-moz-document url-prefix("chrome:") {
+
 
 
     /* ANCHOR [Sidebar Styling] */
@@ -67,4 +67,3 @@
         border-top: 1px solid rgba(255, 255, 255, 0.15) !important;
     }
 
-}

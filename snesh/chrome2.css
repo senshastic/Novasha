@@ -5,7 +5,6 @@
 @author         Snesh
 ==/UserStyle== */
 
-@-moz-document url-prefix("chrome:") {
 
 
 .tabbrowser-tab:not([zen-essential="true"]):hover {
@@ -21,5 +20,4 @@ font-family: 'Monaspace Xenon' !important;
 
 #zen-current-workspace-indicator{
     font-family: 'CC Wild Words' !important;
-}
 }

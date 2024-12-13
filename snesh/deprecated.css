@@ -89,3 +89,8 @@ appearance: none;
   
   
   }
+
+  background: 
+  linear-gradient(109.6deg, rgba(8, 19, 54, 0.95) 0%, rgba(26, 58, 102, 0.95) 25%, rgba(43, 1, 91, 0.95) 50%, rgba(122, 2, 54, 0.95) 100%), 
+  linear-gradient(120deg, rgba(15, 25, 50, 0.4) 0%, rgba(25, 60, 100, 0.4) 50%, rgba(50, 10, 80, 0.4) 100%), 
+  url("https://raw.githubusercontent.com/senshastic/sensha-betterer-todoist/refs/heads/main/assets/noise.svg") !important; 

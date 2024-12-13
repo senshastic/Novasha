@@ -1,7 +1,10 @@
 
 toolbarbutton:hover,
 button:not([disabled="true"]):hover,
-menulist:not([disabled="true"]):hover {
+menulist:not([disabled="true"]):hover,
+.urlbarView-row:hover,
+menuitem:hover,
+.menu-iconic.bookmark-item:hover {
     background-color: rgba(5, 5, 5, 0) !important;
 		border-radius: 12px;
 		box-shadow: 0 8px 15px rgba(0, 0, 0, 0.37);
@@ -9,6 +12,11 @@ menulist:not([disabled="true"]):hover {
 		-webkit-backdrop-filter: blur(100px);
 		transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 		transform: translateY(-2px);
+}
+
+.urlbarView-row-inner:hover,
+.footer-button{
+		background-color: transparent !important;
 }
 
 .tabbrowser-tab[zen-essential="true"]:hover{

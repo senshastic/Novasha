@@ -1,0 +1,48 @@
+#urlbar:is([breakout][breakout-extend], [breakout][usertyping][focused]) {
+    &:after {
+        content: "";
+        position: fixed;
+        pointer-events: none;
+
+        width: 100vw;
+        height: 100vh;
+
+        top: 0px;
+        left: 0px;
+
+        background-color: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(5px);
+
+        z-index: -1;
+    }
+}
+
+
+#urlbar-background {
+    background: 
+    linear-gradient(109.6deg, rgba(8, 19, 54, 0.95) 0%, rgba(26, 58, 102, 0.95) 25%, rgba(43, 1, 91, 0.95) 50%, rgba(122, 2, 54, 0.95) 100%), 
+    linear-gradient(120deg, rgba(15, 25, 50, 0.4) 0%, rgba(25, 60, 100, 0.4) 50%, rgba(50, 10, 80, 0.4) 100%), 
+    url("https://raw.githubusercontent.com/senshastic/sensha-betterer-todoist/refs/heads/main/assets/noise.svg") !important; 
+    background-attachment: fixed, fixed, fixed !important;
+    background-size: cover, cover, 150% !important; /* Larger texture size for a blurrier appearance */
+    color: inherit !important;
+    border-radius: 16px !important;
+    border: 1px solid rgba(208, 181, 117, 0.5) !important;
+    overflow: unset !important;
+    opacity: 0.99 !important; /* Slightly reduced transparency for clarity */
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
+    box-shadow: 
+        inset 0 0 10px rgba(255, 255, 255, 0.1), 
+        inset 0 0 20px rgba(255, 255, 255, 0.15) !important; 
+  }
+  
+  #urlbar [focused] > #urlbar-background{
+      box-shadow: inset 0 0px 5px rgba(255, 255, 255, 0.6) !important;
+  }
+  
+  #urlbar-container{
+      background: transparent !important;
+  }
+
+  
+

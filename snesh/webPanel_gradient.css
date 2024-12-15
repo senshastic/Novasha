@@ -28,7 +28,7 @@
         background:
             /* linear-gradient(120deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.2) 100%), */
             url("https://github.com/senshastic/fallsha-zen-mods/blob/main/assets/stardust.png?raw=true"),
-            var(--gradient1),
+            var(--gradient2),
             linear-gradient(120deg, rgba(15, 25, 50, 0.4) 0%, rgba(25, 60, 100, 0.4) 50%, rgba(50, 10, 80, 0.4) 100%) !important;
         background-attachment: fixed, fixed, fixed !important;
         background-size      : 200px, cover, cover !important;

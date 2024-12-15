@@ -15,7 +15,18 @@ IMPORTANT: SET zen.view.experimental-rounded-view in about:config to true for ba
   --in-content-page-background          : transparent !important;
   --input-bgcolor                       : transparent !important;
   --input-border-color                  : rgba(208, 181, 117, 0.5) !important;
-  --gradient1                           : linear-gradient(109.6deg,
+    --arrowpanel-background               : transparent !important;
+    --toolbar-field-focus-background-color: transparent !important;
+    --in-content-page-background          : transparent !important;
+    --input-bgcolor                       : transparent !important;
+    --input-border-color                  : rgba(208, 181, 117, 0.5) !important;
+    --panel-separator-color               : #d0b575 !important;
+    --panel-item-active-bgcolor           : transparent !important;
+    -moz-menuhover                        : transparent !important;
+    --button-hover-bgcolor                : transparent !important;
+    --swipe-nav-icon-accent-color         : transparent !important;
+    --swipe-nav-icon-primary-color        : transparent !important;
+  --gradient1: linear-gradient(109.6deg,
       rgba(8, 19, 54, 0.95) 0%,
       rgba(26, 58, 102, 0.95) 25%,
       rgba(43, 1, 91, 0.95) 50%,
@@ -42,7 +53,7 @@ menupopup {
   background:
     /* linear-gradient(120deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.2) 100%), */
     url("https://github.com/senshastic/fallsha-zen-mods/blob/main/assets/stardust.png?raw=true"),
-    var(--gradient1),
+    var(--gradient2),
     linear-gradient(120deg, rgba(15, 25, 50, 0.4) 0%, rgba(25, 60, 100, 0.4) 50%, rgba(50, 10, 80, 0.4) 100%) !important;
   background-attachment: fixed, fixed, fixed !important;
   background-size      : 200px, cover, cover !important;
@@ -132,20 +143,6 @@ menuitem:not([disabled="true"])[selected="true"] {
   }
 }
 
-:root {
-  --arrowpanel-background               : transparent !important;
-  --toolbar-field-focus-background-color: transparent !important;
-  --in-content-page-background          : transparent !important;
-  --input-bgcolor                       : transparent !important;
-  --input-border-color                  : rgba(208, 181, 117, 0.5) !important;
-  --panel-separator-color               : #d0b575 !important;
-  --panel-item-active-bgcolor           : transparent !important;
-  -moz-menuhover                        : transparent !important;
-  --button-hover-bgcolor                : transparent !important;
-  --swipe-nav-icon-accent-color         : transparent !important;
-  --swipe-nav-icon-primary-color        : transparent !important;
-
-}
 
 panel toolbarseparator {
   appearance   : none;

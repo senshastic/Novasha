@@ -2,3 +2,28 @@
 #forward-button{
 	display: none !important;
 }
+
+
+/* Animate new tab appear animation *//*Cool*/
+#vertical-pinned-tabs-container, #tabbrowser-arrowscrollbox {
+    .tabbrowser-tab {
+      animation: new-tab-appear 0.2s cubic-bezier(0.4, 0.0, 0.2, 1) !important;
+    }
+  }
+  
+  
+  @keyframes new-tab-appear { 
+    0% {
+      opacity: 0;
+      transform: translateY(-25px);
+    }
+    60% {
+      opacity: 0.8  ;
+      transform: translateY(4px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+

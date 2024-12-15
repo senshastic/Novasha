@@ -80,7 +80,7 @@ dialog:not(#zenNewWebPanelDialog) {
   background:
     /* linear-gradient(120deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.2) 100%), */
     url("https://github.com/senshastic/fallsha-zen-mods/blob/main/assets/stardust.png?raw=true"),
-    var(--gradient1),
+    var(--gradient2),
     linear-gradient(120deg, rgba(15, 25, 50, 0.4) 0%, rgba(25, 60, 100, 0.4) 50%, rgba(50, 10, 80, 0.4) 100%) !important;
   background-attachment: fixed, fixed, fixed !important;
   background-size      : 200px, cover, cover !important;
@@ -95,6 +95,22 @@ dialog:not(#zenNewWebPanelDialog) {
   opacity   : 0.99 !important;
   /* Slightly reduced transparency for clarity */
   transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+
+#PanelUI-zen-profiles-header,
+#PanelUI-zen-profiles-user-picture {
+
+    background-color: rgba(5, 5, 5, .18) !important;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(100px) saturate(110%);
+        -webkit-backdrop-filter: blur(100px);
+        transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+#zen-profile-button-icon {
+
+	border: none !important;
 }
 
 .dialogBox {

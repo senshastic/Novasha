@@ -1,24 +1,6 @@
 @media (prefers-reduced-motion: no-preference) {
-    .tab-loading-burst {
-      border-radius: inherit;
-      position: relative;
-      overflow: hidden;
-  
-      &::before {
-        position: absolute;
-        content: "";
-        /* We set the width to be a percentage of the tab's width so that we can use
-           the `scale` transform to scale it up to the full size of the tab when the
-           burst occurs. We also need to set the margin-inline-start so that the
-           center of the burst matches the center of the favicon. */
-        width: 5%;
-        height: 100%;
-        /* Center the burst over the .tab-loading-burst; it's 9px from the edge thanks
-           to .tab-content, plus 8px more since .tab-loading-burst is 16px wide. */
-        margin-inline-start: calc(17px - 2.5%);
-      }
+    .tabbrowser-tab:not([zen-essential="true"])>.tab-stack>.tab-background>.tab-loading-burst {
 
-  
       &[bursting]::before {
         content: "";
         position: absolute; /* Position it relative to the parent */
@@ -32,23 +14,8 @@
         background-repeat: no-repeat;
         animation: tab-burst-animation-fallen 4s cubic-bezier(0, 0, 0.58, 1) forwards !important;
       }
-      
-  
-      &[bursting][notselectedsinceload]::before {
-        animation-name: tab-burst-animation-fallen !important;
-      }
+        
     }
-  
-    @keyframes tab-burst-animation {
-        0% {
-          opacity: 0.2;
-          transform: translateX(0%);
-        }
-        100% {
-          opacity: 0;
-          transform: translateX(100%);
-        }
-      }     
   
       @keyframes tab-burst-animation-fallen {
         0% {

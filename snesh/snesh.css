@@ -4,10 +4,13 @@
 }
 
 
-/* Animate new tab appear animation *//*Cool*/
+
+
+
+/* Animate new tab appear animation 
 #vertical-pinned-tabs-container, #tabbrowser-arrowscrollbox {
     .tabbrowser-tab {
-      animation: new-tab-appear 0.2s cubic-bezier(0.4, 0.0, 0.2, 1) !important;
+      animation: new-tab-appear 0.5s cubic-bezier(0.4, 0.0, 0.2, 1) !important;
     }
   }
   
@@ -15,11 +18,11 @@
   @keyframes new-tab-appear { 
     0% {
       opacity: 0;
-      transform: translateY(-25px);
+      transform: translateY(-10px);
     }
     60% {
       opacity: 0.8  ;
-      transform: translateY(4px);
+      transform: translateY(50px);
     }
     100% {
       opacity: 1;
@@ -27,3 +30,5 @@
     }
   }
 
+
+  */

@@ -4,15 +4,15 @@
       &[bursting]::before {
         content: "";
         position: absolute; /* Position it relative to the parent */
-        top: 50%; 
+        top: 47%; 
         left: 0%; 
-        width: 100px !important; /* Set an appropriate size for the pseudo-element */
-        height: 100px !important; /* Match height to maintain aspect ratio */
-        background-image: url("https://i.gifer.com/PYh.gif") !important;
+        width: 35px !important; /* Set an appropriate size for the pseudo-element */
+        height: 35px !important; /* Match height to maintain aspect ratio */
+        background-image: url("https://cdn.discordapp.com/emojis/1286249075775242240.webp?size=240&animated=true") !important;
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-        animation: tab-burst-animation-fallen 4s cubic-bezier(0, 0, 0.58, 1) forwards !important;
+        animation: tab-burst-animation-fallen 8s cubic-bezier(0, 0, 0.58, 1) forwards !important;
       }
         
     }

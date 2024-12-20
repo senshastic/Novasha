@@ -3,11 +3,11 @@
 
       &[bursting]::before {
         content: "";
-        position: absolute; /* Position it relative to the parent */
+        position: absolute; 
         top: 47%; 
         left: 0%; 
-        width: 35px !important; /* Set an appropriate size for the pseudo-element */
-        height: 35px !important; /* Match height to maintain aspect ratio */
+        width: 35px !important; 
+        height: 35px !important; 
         background-image: url("https://cdn.discordapp.com/emojis/1286249075775242240.webp?size=240&animated=true") !important;
         background-position: center;
         background-size: cover;
@@ -22,7 +22,39 @@
           transform: translate(-50%, -50%);
         }
         100% {
-          transform: translate(50vw, -50%) translateX(100%); /* Move horizontally while scaling */
+          transform: translate(50vw, -50%) translateX(100%); 
+        }
+      }    
+  }
+
+
+/*
+
+@media (prefers-reduced-motion: no-preference) {
+    .tabbrowser-tab:not([zen-essential="true"])>.tab-stack>.tab-background>.tab-loading-burst {
+
+      &[bursting]::before {
+        content: "";
+        position: absolute; 
+        top: 50%; 
+        left: 0%; 
+        width: 100px !important; 
+        height: 100px !important; 
+        background-image: url("https://i.gifer.com/PYh.gif") !important;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        animation: tab-burst-animation-fallen 4s cubic-bezier(0, 0, 0.58, 1) forwards !important;
+      }
+        
+    }
+  
+      @keyframes tab-burst-animation-fallen {
+        0% {
+          transform: translate(-50%, -50%);
+        }
+        100% {
+          transform: translate(50vw, -50%) translateX(100%); 
         }
       }    
   }

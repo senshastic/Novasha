@@ -1,6 +1,16 @@
-//Need https://github.com/MrOtherGuy/fx-autoconfig
+// ==UserScript==
+// @name           tab_color_thing
+// @namespace      tab_color_thingy
+// @version        0.0.2
+// @ignorecache
+// @loadOrder      1
+// @description    set tab color to favicon color
+// ==/UserScript==
 
 (function () {
+	if (_gBrowser) {
+		gBrowser = window._gBrowser;
+	}
 	function getDominantColor(imageUrl, callback) {
 		let img = new Image();
 		img.crossOrigin = "Anonymous";
@@ -119,4 +129,6 @@
 			applyTabColor(tab);
 		}
 	});
+
+	Array.from(gBrowser.tabContainer.children).forEach(applyTabColor);
 })();

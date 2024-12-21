@@ -11,7 +11,7 @@ tab-group{/*Remove the double slash from the front of this line to enable this t
       margin-inline: 2px !important;/*The distance between the folder ico and title/label text & the tab group's border*/
       width: 100%;
       
-      &>label::before {/*Folder Ico*/
+      &>label::before {
         content: "" !important;
         position: absolute !important;
         left: 7px !important;

@@ -1,3 +1,5 @@
+
+
 @media (prefers-reduced-motion: no-preference) {
     .tabbrowser-tab:not([zen-essential="true"])>.tab-stack>.tab-background>.tab-loading-burst {
 
@@ -8,7 +10,7 @@
         left: 0%; 
         width: 35px !important; 
         height: 35px !important; 
-        background-image: url("https://cdn.discordapp.com/emojis/1286249075775242240.webp?size=240&animated=true") !important;
+        background-image: url("https://cdn.discordapp.com/emojis/1250897909159825488.webp?size=240&animated=true") !important;
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -27,8 +29,7 @@
       }    
   }
 
-
-/*
+/* 
 
 @media (prefers-reduced-motion: no-preference) {
     .tabbrowser-tab:not([zen-essential="true"])>.tab-stack>.tab-background>.tab-loading-burst {
@@ -57,4 +58,12 @@
           transform: translate(50vw, -50%) translateX(100%); 
         }
       }    
+  }
+
+  0% { background-image: url("https://cdn.discordapp.com/emojis/1286249075775242240.webp?size=240&animated=true"); }
+      25% { background-image: url("https://cdn.discordapp.com/emojis/856959619141992508.webp?size=240&animated=true"); }
+      50% { background-image: url("https://cdn.discordapp.com/emojis/1237312808534671450.webp?size=240&animated=true"); }
+      75% { background-image: url("https://cdn.discordapp.com/emojis/1294101996491767840.webp?size=240&animated=true"); }
+      100% { background-image: url("https://cdn.discordapp.com/emojis/1250897909159825488.webp?size=240&animated=true"); }
+    }
   }

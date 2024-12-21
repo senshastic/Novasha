@@ -1,0 +1,12 @@
+.tab-icon-overlay[soundplaying] {
+	list-style-image: url('https://cdn.discordapp.com/emojis/1237312808534671450.webp?size=240&animated=true') !important;
+	background-image: none !important;
+	fill: none !important;
+    background-color: rgba(5, 5, 5, .18) !important;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(100px) saturate(110%);
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    padding: 5px;
+
+}

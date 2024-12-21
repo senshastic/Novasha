@@ -1,13 +1,18 @@
 // ==UserScript==
 // @name           tab_color_thing
 // @namespace      tab_color_thingy
-// @version        0.0.2
+// @version        0.0.3
 // @ignorecache
 // @loadOrder      1
 // @description    set tab color to favicon color
 // ==/UserScript==
 
+//Need https://github.com/MrOtherGuy/fx-autoconfig
+// ignorecache needed for quick testing
+// load order probably irrelevant
+
 (function () {
+	//I don't get why we need this but it makes things worky
 	if (_gBrowser) {
 		gBrowser = window._gBrowser;
 	}
@@ -53,7 +58,8 @@
 		};
 	}
 
-	function getVibrantColor(imageUrl, callback) {
+	//Max Brightness thanks to deepseek (smarter than chatgpt)
+	function getVibrantColor(imageUrl, maxBrightness, callback) {
 		let img = new Image();
 		img.crossOrigin = "Anonymous";
 		img.src = imageUrl;
@@ -77,16 +83,31 @@
 				g = 0,
 				b = 0,
 				weight = 0;
+
+			// Normalize maxBrightness between 0 and 1
+			let brightnessThreshold =
+				Math.min(Math.max(maxBrightness, 0), 100) / 100;
+
 			for (let i = 0; i < data.length; i += 4) {
 				let red = data[i];
 				let green = data[i + 1];
 				let blue = data[i + 2];
 
+				// Calculate brightness (luminance)
 				let brightness = 0.2126 * red + 0.7152 * green + 0.0722 * blue;
-				let saturation =
-					Math.max(red, green, blue) - Math.min(red, green, blue);
 
-				let currentWeight = brightness * saturation;
+				// Calculate saturation
+				let max = Math.max(red, green, blue);
+				let min = Math.min(red, green, blue);
+				let saturation = max === 0 ? 0 : (max - min) / max;
+
+				// Apply brightness threshold
+				if (brightness / 255 > brightnessThreshold) {
+					continue; // Skip pixels that exceed the brightness threshold
+				}
+
+				// Weight based on saturation
+				let currentWeight = saturation;
 				r += red * currentWeight;
 				g += green * currentWeight;
 				b += blue * currentWeight;
@@ -110,7 +131,7 @@
 	function applyTabColor(tab) {
 		let faviconUrl = tab.image;
 		if (faviconUrl) {
-			getVibrantColor(faviconUrl, (color) => {
+			getVibrantColor(faviconUrl, 75, (color) => {
 				if (color) {
 					tab.style.backgroundColor = color;
 				}

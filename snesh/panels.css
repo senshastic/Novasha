@@ -54,7 +54,7 @@ menupopup,
 #confirmation-hint {
   --arrowpanel-background: transparent !important;
   --panel-background     : rgba(88, 88, 88, 0) !important;
-  --panel-shadow-margin  : 1px !important;
+  --panel-shadow-margin  : 0px !important;
   --panel-border-radius  : 12px !important;
   background             :
     url("https://github.com/senshastic/fallsha-zen-mods/blob/main/assets/stardust.png?raw=true"),
@@ -180,6 +180,12 @@ html|textarea {
   -webkit-backdrop-filter: blur(100px);
   transition             : background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   padding                : 5px;
+}
+
+/* lower common dialog a tad */
+
+#commonDialog {
+  margin-top: 10px !important;
 }
 
 .tooltip-panel {

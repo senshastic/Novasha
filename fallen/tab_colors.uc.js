@@ -3,6 +3,7 @@
 // @namespace      tab_color_thingy
 // @version        0.0.4
 // @ignorecache
+// @author		   FallenStar
 // @loadOrder      1
 // @description    set tab color to favicon color
 // ==/UserScript==

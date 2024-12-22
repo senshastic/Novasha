@@ -11,6 +11,9 @@
 // ignorecache needed for quick testing
 // load order probably irrelevant
 
+//https://searchfox.org/mozilla-central/source/browser/components/tabbrowser/content/tabbrowser.js
+//gBrowser stuff & more, also events & def for stuff
+
 (function () {
 	let enabled = true;
 	if (enabled) {

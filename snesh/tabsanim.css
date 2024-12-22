@@ -15,7 +15,9 @@
       outline-offset: -1px !important;
   }
     */
-  &:hover, .tabbrowser-tab[selected]:has(&) .tab-background, .tab-stack:hover:has(&) .tab-background, #zen-essentials-container:has(&) .tabbrowser-tab:hover .tab-background {
+  &:hover, .tabbrowser-tab[selected]:has(&) .tab-background, 
+  .tab-stack:hover:has(&) .tab-background
+  /* ,#zen-essentials-container:has(&) .tabbrowser-tab:hover .tab-background */ {
       box-shadow: 0px 2px 0px 0px #FFFFFF0f, 
                   0px 2px 8px 0px #00000040,
                   inset 0px 8px 8px 0px #FFFFFF07 !important;

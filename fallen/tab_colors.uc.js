@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name           tab_color_thing
 // @namespace      tab_color_thingy
-// @version        0.0.3
+// @version        0.0.4
 // @ignorecache
 // @loadOrder      1
 // @description    set tab color to favicon color
@@ -123,7 +123,7 @@
 					b = Math.floor(b / weight);
 				}
 
-				callback(`rgb(${r}, ${g}, ${b})`);
+				callback(`rgba(${r}, ${g}, ${b})`);
 			};
 
 			img.onerror = function () {
@@ -136,7 +136,15 @@
 			if (faviconUrl) {
 				getVibrantColor(faviconUrl, 75, (color) => {
 					if (color) {
-						tab.style.backgroundColor = color;
+						let gradientBackground = `linear-gradient(135deg, ${color} 0%, #1a1a1a 100%)`;
+
+						tab.style.background = gradientBackground;
+
+						let favicon = tab.querySelector(".tab-icon-image");
+						if (favicon) {
+							favicon.style.boxShadow = `0px 0px 10px 5px rgba(0, 0, 0, 0.5)`;
+							favicon.style.borderRadius = "50%";
+						}
 					}
 				});
 			}

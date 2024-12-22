@@ -31,7 +31,10 @@
 
 
 
-@media (prefers-reduced-motion: no-preference) {
+
+/* NEED TO MAKE VARIABLES FOR SIZE AND IMAGES. 
+
+  @media (prefers-reduced-motion: no-preference) {
     .tabbrowser-tab:not([zen-essential="true"])>.tab-stack>.tab-background>.tab-loading-burst {
 
       &[bursting]::before {
@@ -58,43 +61,4 @@
           transform: translate(50vw, -50%) translateX(100%); 
         }
       }    
-  }
-
-/* 
-
-@media (prefers-reduced-motion: no-preference) {
-    .tabbrowser-tab:not([zen-essential="true"])>.tab-stack>.tab-background>.tab-loading-burst {
-
-      &[bursting]::before {
-        content: "";
-        position: absolute; 
-        top: 50%; 
-        left: 0%; 
-        width: 100px !important; 
-        height: 100px !important; 
-        background-image: url("https://i.gifer.com/PYh.gif") !important;
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        animation: tab-burst-animation-fallen 4s cubic-bezier(0, 0, 0.58, 1) forwards !important;
-      }
-        
-    }
-  
-      @keyframes tab-burst-animation-fallen {
-        0% {
-          transform: translate(-50%, -50%);
-        }
-        100% {
-          transform: translate(50vw, -50%) translateX(100%); 
-        }
-      }    
-  }
-
-  0% { background-image: url("https://cdn.discordapp.com/emojis/1286249075775242240.webp?size=240&animated=true"); }
-      25% { background-image: url("https://cdn.discordapp.com/emojis/856959619141992508.webp?size=240&animated=true"); }
-      50% { background-image: url("https://cdn.discordapp.com/emojis/1237312808534671450.webp?size=240&animated=true"); }
-      75% { background-image: url("https://cdn.discordapp.com/emojis/1294101996491767840.webp?size=240&animated=true"); }
-      100% { background-image: url("https://cdn.discordapp.com/emojis/1250897909159825488.webp?size=240&animated=true"); }
-    }
   }

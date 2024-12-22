@@ -147,6 +147,7 @@
 			applyTabColor(selectedTab);
 		});
 
+		//either find another event or run this only once per tab, idk
 		gBrowser.tabContainer.addEventListener("TabAttrModified", (event) => {
 			let tab = event.target;
 			if (tab.hasAttribute("image")) {

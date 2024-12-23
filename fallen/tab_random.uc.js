@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name           Randomized Tab Burst Animation
 // @namespace      random_tab_burst
-// @version        1.0.3
-// @description    Randomize tab burst animations 
+// @version        1.0.4
+// @description    Randomize tab burst animations, excluding essential tabs
 // @author         sensha
 // ==/UserScript==
 
@@ -44,6 +44,9 @@
         const tabAnimations = new WeakMap();
 
         function applyRandomAnimation(tab) {
+            // Skip tabs marked as "zen-essential"
+            if (tab.getAttribute("zen-essential") === "true") return;
+
             if (tabAnimations.has(tab)) return;
 
             const burstElement = tab.querySelector(".tab-loading-burst[bursting]");
@@ -86,10 +89,10 @@
                 burstElement.addEventListener("animationend", () => {
                     tabAnimations.delete(tab);
                 }, { once: true });
-            }, 50); 
+            }, 50);
         }
 
-        // tab events
+        // Tab events
         gBrowser.tabContainer.addEventListener("TabSelect", (event) => {
             const selectedTab = event.target;
             applyRandomAnimation(selectedTab);

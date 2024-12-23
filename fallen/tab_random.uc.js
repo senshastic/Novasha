@@ -2,7 +2,7 @@
 // @name           Randomized Tab Burst Animation
 // @namespace      random_tab_burst
 // @version        1.0.4
-// @description    Randomize tab burst animations, excluding essential tabs
+// @description    Randomize tab burst animations
 // @author         sensha
 // ==/UserScript==
 
@@ -44,7 +44,6 @@
         const tabAnimations = new WeakMap();
 
         function applyRandomAnimation(tab) {
-            // Skip tabs marked as "zen-essential"
             if (tab.getAttribute("zen-essential") === "true") return;
 
             if (tabAnimations.has(tab)) return;

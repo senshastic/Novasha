@@ -1,4 +1,4 @@
-# Sensha's and FallenStar's repo for all Zen customization scripts. 
+# Sensha and FallenStar's repo for all Zen customization scripts. 
 
 ## Preview 
 

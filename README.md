@@ -21,7 +21,9 @@
 
 ## CSS library 
 
-**To be submitted as Zen mods so they are available through the shop and easy to customize** 
+**To be submitted as Zen mods to be available through the shop and easy to customize.** 
+
+
 
 ## JS library 
 

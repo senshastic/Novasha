@@ -44,8 +44,10 @@
         const tabAnimations = new WeakMap();
 
         function applyRandomAnimation(tab) {
-            if (tab.getAttribute("zen-essential") === "true") return;
+            // Skip tabs in the #vertical-pinned-tabs-container
+            if (tab.closest("#vertical-pinned-tabs-container")) return;
 
+            if (tab.getAttribute("zen-essential") === "true") return;
             if (tabAnimations.has(tab)) return;
 
             const burstElement = tab.querySelector(".tab-loading-burst[bursting]");

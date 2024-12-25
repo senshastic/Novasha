@@ -1,10 +1,8 @@
 // ==UserScript==
 // @name           tab_color_thing
 // @namespace      tab_color_thingy
-// @version        0.0.4
+// @version        0.0.5
 // @ignorecache
-// @author		   FallenStar
-// @loadOrder      1
 // @description    set tab color to favicon color
 // ==/UserScript==
 
@@ -154,19 +152,24 @@
 			}
 		}
 
-		gBrowser.tabContainer.addEventListener("TabSelect", (event) => {
-			let selectedTab = event.target;
-			applyTabColor(selectedTab);
-		});
+		const processedTabs = new Set();
 
-		//either find another event or run this only once per tab, idk
 		gBrowser.tabContainer.addEventListener("TabAttrModified", (event) => {
 			let tab = event.target;
-			if (tab.hasAttribute("image")) {
-				applyTabColor(tab);
+
+			if (!processedTabs.has(tab)) {
+				processedTabs.add(tab);
+
+				if (tab.hasAttribute("image")) {
+					applyTabColor(tab);
+				}
+			} else if (event.detail.changed.includes("image")) {
+				if (tab.hasAttribute("image")) {
+					applyTabColor(tab);
+				}
 			}
 		});
-
+		//Probably doesn't even work
 		Array.from(gBrowser.tabContainer.children).forEach(applyTabColor);
 	}
 })();

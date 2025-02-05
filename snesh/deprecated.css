@@ -29,3 +29,30 @@ var(--swipe-nav-icon-primary-color)
     fill: red !important;
   }
 }
+
+
+.tab-icon-overlay[soundplaying] {
+	list-style-image: url('https://github.com/senshastic/fallsha-zen-customizations/blob/main/assets/meow%20party.gif?raw=true') !important;
+	background-image: none !important;
+	fill: none !important;
+    background-color: rgba(5, 5, 5, 0) !important;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(100px) saturate(110%);
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    padding: 5px;
+
+}
+
+.tab-icon-overlay[muted] {
+	list-style-image: url('https://github.com/senshastic/fallsha-zen-customizations/blob/main/assets/meow%20not%20party.png?raw=true') !important;
+	background-image: none !important;
+	fill: none !important;
+    background-color: rgba(5, 5, 5, 0) !important;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(100px) saturate(110%);
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    padding: 5px;
+
+}

@@ -1,12 +1,16 @@
 
-
+:root {
+  --nyan-cat               : https://i.gifer.com/PYh.gif;
+  --size                   : 100px;
+  --duration               : 4s;  
+}
 
 /* Glassy tabs */
 .tab-background, #tabs-newtab-button {
   transition: outline .5s fade-out,
               box-shadow .6s fade-out;
 
-/* uncomment for essentials to be included in the glassy effect 
+
 
 #zen-essentials-container:has(&) .tab-background {
       box-shadow: 0px 2px 0px 0px #FFFFFF0f, 
@@ -14,10 +18,10 @@
       outline: 1px solid #ffffff10 !important;
       outline-offset: -1px !important;
   }
-    */
+
   &:hover, .tabbrowser-tab[selected]:has(&) .tab-background, 
-  .tab-stack:hover:has(&) .tab-background
-  /* ,#zen-essentials-container:has(&) .tabbrowser-tab:hover .tab-background */ {
+  .tab-stack:hover:has(&) .tab-background,
+  #zen-essentials-container:has(&) .tabbrowser-tab:hover .tab-background {
       box-shadow: 0px 2px 0px 0px #FFFFFF0f, 
                   0px 2px 8px 0px #00000040,
                   inset 0px 8px 8px 0px #FFFFFF07 !important;
@@ -32,33 +36,31 @@
 
 
 
-/* NEED TO MAKE VARIABLES FOR SIZE AND IMAGES. 
+@media (prefers-reduced-motion: no-preference) {
+  .tabbrowser-tab:not([zen-essential="true"])>.tab-stack>.tab-background>.tab-loading-burst {
 
-  @media (prefers-reduced-motion: no-preference) {
-    .tabbrowser-tab:not([zen-essential="true"])>.tab-stack>.tab-background>.tab-loading-burst {
-
-      &[bursting]::before {
-        content: "";
-        position: absolute; 
-        top: 47%; 
-        left: 0%; 
-        width: 35px !important; 
-        height: 35px !important; 
-        background-image: url("https://cdn.discordapp.com/emojis/1250897909159825488.webp?size=240&animated=true") !important;
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        animation: tab-burst-animation-fallen 8s cubic-bezier(0, 0, 0.58, 1) forwards !important;
-      }
-        
+    &[bursting]::before {
+      content: "";
+      position: absolute; 
+      top: 47%; 
+      left: 0%; 
+      width: var(--size) !important; 
+      height: var(--size) !important; 
+      background-image: url("https://i.gifer.com/PYh.gif") !important;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      animation: tab-burst-animation-fallen var(--duration) cubic-bezier(0, 0, 0.58, 1) forwards !important;
     }
-  
-      @keyframes tab-burst-animation-fallen {
-        0% {
-          transform: translate(-50%, -50%);
-        }
-        100% {
-          transform: translate(50vw, -50%) translateX(100%); 
-        }
-      }    
+      
   }
+
+    @keyframes tab-burst-animation-fallen {
+      0% {
+        transform: translate(-50%, -50%);
+      }
+      100% {
+        transform: translate(50vw, -50%) translateX(100%); 
+      }
+    }    
+}

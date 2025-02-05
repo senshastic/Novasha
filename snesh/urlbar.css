@@ -26,3 +26,22 @@
   border-top   : 1px solid #d0b575 !important;
   border-bottom: 1px solid #d0b575 !important;
 }
+
+#urlbar:is([breakout][breakout-extend], [breakout][usertyping][focused]) {
+  &:after {
+    content       : "";
+    position      : fixed;
+    pointer-events: none;
+
+    width : 100vw;
+    height: 100vh;
+
+    top : 0px;
+    left: 0px;
+
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter : blur(5px);
+
+    z-index: -1;
+  }
+}

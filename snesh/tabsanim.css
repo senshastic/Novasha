@@ -38,7 +38,9 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .tabbrowser-tab:not([zen-essential="true"])>.tab-stack>.tab-background>.tab-loading-burst {
-
+    background: transparent !important;
+    color: transparent !important;
+    display: block !important;
     &[bursting]::before {
       content: "";
       position: absolute; 

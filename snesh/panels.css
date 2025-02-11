@@ -24,7 +24,7 @@ IMPORTANT: SET zen.view.experimental-rounded-view in about:config to true for ba
   --input-border-color                  : rgba(208, 181, 117, 0.5) !important;
   --panel-separator-color               : #d0b575 !important;
   --panel-item-active-bgcolor           : transparent !important;
-  -moz-menuhover                        : transparent !important;
+  --moz-menuhover                        : transparent !important;
   --button-hover-bgcolor                : transparent !important;
   --swipe-nav-icon-accent-color         : transparent !important;
   --swipe-nav-icon-primary-color        : transparent !important;
@@ -50,7 +50,7 @@ IMPORTANT: SET zen.view.experimental-rounded-view in about:config to true for ba
       rgba(122, 2, 54, 0.95) 100%);
 }
 
-panel,
+panel:not(#autoscroller),
 menupopup,
 #confirmation-hint {
   --arrowpanel-background: transparent !important;

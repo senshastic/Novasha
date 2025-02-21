@@ -18,6 +18,6 @@ font-family: 'Monaspace Xenon' !important;
 } 
 
 
-#zen-current-workspace-indicator{
+.zen-current-workspace-indicator {
     font-family: 'CC Wild Words' !important;
 }

@@ -1,12 +1,12 @@
 tab-group{/*Remove the double slash from the front of this line to enable this tab group styling*/
     display: grid !important;
-    background: color-mix(in srgb, var(--tab-group-color-invert) 11%, transparent) !important;/*Modify to change the level of transparency/brightness*/
+    background-color: rgba(5, 5, 5, .18) !important;
+    backdrop-filter: blur(150px) !important; 
+    box-shadow: inset 0px 2px 0px 0px #00000020, inset 0px 2px 8px 0px #00000040 !important;
     border-radius: calc(var(--border-radius-medium) + 0px) !important;
     margin-top: 2px !important;
     margin-bottom: 1px !important;
-    margin-inline: 1px !important;/*The distance between the tab group's border & the sidebar's edge*/
-    border: 2px solid color-mix(in srgb, var(--tab-group-color) 50%, transparent) !important;
-    
+    margin-inline: 1px !important;/*The distance between the tab group's border & the sidebar's edge*/    
     & .tab-group-label-container{
       margin-inline: 2px !important;/*The distance between the folder ico and title/label text & the tab group's border*/
       width: 100%;
@@ -30,7 +30,7 @@ tab-group{/*Remove the double slash from the front of this line to enable this t
       &:after{/*The separator between folder ico and label & the tabs*/
         padding: 0px !important;
         transform: scaleX(1) !important;
-        background-color: color-mix(in srgb, var(--tab-group-color) 50%, transparent) !important;
+        background-color: rgba(5, 5, 5, .18) !important;
         transition: transform 0.2s ease-out !important;
       }
       
@@ -75,7 +75,7 @@ tab-group{/*Remove the double slash from the front of this line to enable this t
         transform: translateY(-50%) !important;
         width: 16px !important;
         height: 16px !important;
-        background-color: var(--sidebar-text-color);
+        background-color: rgba(5, 5, 5, .18) !important;
         mask-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNOC4yMDcgNGMuNDYgMCAuOTA4LjE0MSAxLjI4NC40MDJsLjE1Ni4xMkwxMi4wMjIgNi41aDcuNzI4YTIuMjUgMi4yNSAwIDAgMSAyLjIyOSAxLjkzOGwuMDE2LjE1OC4wMDUuMTU0djlhMi4yNSAyLjI1IDAgMCAxLTIuMDk2IDIuMjQ1TDE5Ljc1IDIwSDQuMjVhMi4yNSAyLjI1IDAgMCAxLTIuMjQ1LTIuMDk2TDIgMTcuNzVWNi4yNWEyLjI1IDIuMjUgMCAwIDEgMi4wOTYtMi4yNDVMNC4yNSA0aDMuOTU3Wm0xLjQ0IDUuOTc5YTIuMjUgMi4yNSAwIDAgMS0xLjI0NC41MTJsLS4xOTYuMDA5LTQuNzA3LS4wMDF2Ny4yNTFjMCAuMzguMjgyLjY5NC42NDguNzQzbC4xMDIuMDA3aDE1LjVhLjc1Ljc1IDAgMCAwIC43NDMtLjY0OGwuMDA3LS4xMDJ2LTlhLjc1Ljc1IDAgMCAwLS42NDgtLjc0M0wxOS43NSA4aC03LjcyOUw5LjY0NyA5Ljk3OVpNOC4yMDcgNS41SDQuMjVhLjc1Ljc1IDAgMCAwLS43NDMuNjQ4TDMuNSA2LjI1djIuNzQ5TDguMjA3IDlhLjc1Ljc1IDAgMCAwIC4zOTUtLjExM2wuMDg1LS4wNiAxLjg5MS0xLjU3OC0xLjg5LTEuNTc1YS43NS43NSAwIDAgMC0uMzc3LS4xNjdMOC4yMDcgNS41WiIgZmlsbD0iIzAwMDAwMCIvPjwvc3ZnPg==');
         mask-size: contain;
         mask-repeat: no-repeat;
@@ -111,17 +111,14 @@ tab-group{/*Remove the double slash from the front of this line to enable this t
   /* Animated FF tab groups */
 tab-group {
     display: grid !important;
-    background: color-mix(
-        in srgb,
-        var(--tab-group-color-invert) 12%,
-        transparent
-    ) !important;
+    background-color: rgba(5, 5, 5, .18) !important;
+    backdrop-filter: blur(150px) !important; 
+    box-shadow: inset 0px 2px 0px 0px #00000020, inset 0px 2px 8px 0px #00000040 !important;
     border-radius: calc(var(--border-radius-medium) + 2px) !important;
     margin-top: 2px !important;
     margin-bottom: 1px !important;
     margin-inline: 2px !important;
     border: none !important;
-    box-shadow: inset 0 0px 5px color-mix(in srgb, var(--tab-group-color-invert) 50%, transparent) !important;
     & .tab-group-label-container {
         margin-inline: 0px !important;
         width: 100%;
@@ -129,11 +126,6 @@ tab-group {
         &:after {
             padding: 0px !important;
             transform: scaleX(1) !important;
-            background-color: color-mix(
-                in srgb,
-                var(--tab-group-color) 50%,
-                transparent
-            ) !important;
             transition: transform 0.2s ease-out !important;
         }
 
@@ -147,7 +139,7 @@ tab-group {
             font-weight: 600 !important;
             text-align: unset !important;
             margin-left: 2rem !important;
-            color: var(--sidebar-text-color) !important;
+            color: white !important;
             font-family: 'CC Wild Words' !important;
         }
     }

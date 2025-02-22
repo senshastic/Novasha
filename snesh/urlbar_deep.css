@@ -41,8 +41,8 @@
     height: 1000vh !important;
     padding: 1000px;
 
-    top : 0px;
-    left: 0px;
+    top : -1000px;
+    left: -1000px;
 
     background-color: rgba(0, 0, 0, 0.3);
     backdrop-filter : blur(5px);

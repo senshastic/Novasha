@@ -219,3 +219,19 @@ tab-group {
         box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.1) !important;
     }
 }
+
+
+tab[dragover-createGroup] {
+  background-color: transparent !important;
+  color: transparent !important;
+  border: none !important;
+}
+
+vbox[dragover-createGroup] {
+  background-color: rgba(5, 5, 5, .18) !important;
+    backdrop-filter: blur(150px) !important; 
+    box-shadow: inset 0px 2px 0px 0px #00000020, inset 0px 2px 8px 0px #00000040 !important;
+    border: none !important;
+}
+
+

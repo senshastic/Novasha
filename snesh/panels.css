@@ -192,3 +192,8 @@ html|textarea {
 .tooltip-panel {
   border: none !important;
 }
+
+
+button[part="dialog-button"] {
+  color:#d0b575 !important;
+}

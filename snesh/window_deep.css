@@ -4,3 +4,8 @@
     border-radius: 12px !important;
     margin: 2px 3px 2px 2px !important;    
 }
+  
+    .browserContainer {
+        clip-path: inset(0 round 12px);
+    }
+    

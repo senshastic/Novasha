@@ -83,4 +83,4 @@ PRs/forks are welcome. You can also contact us on the Zen Browser discord server
 ## Credits 
 
 - The Zen team, particularly everyone active on the Zen discord server for inspiration, advice and cheers.
-- Our beloved cats: Loky, Pelote, Peluche, Yumi, Zoey and Misy (we do have a lot of these).
+- Our beloved cats: Loky, Pelote, Peluche, Yumi, Zoey and Mizy (we do have a lot of these).

@@ -1,0 +1,14 @@
+:root {
+    --zen-main-browser-background: #00e7ff1c !important;
+}
+
+/*Blur for the tab behing the glanced thing*/
+.zen-glance-background {
+    filter: blur(5px) !important;
+}
+
+/*fix background transparency for glanced tabs */
+.zen-glance-overlay>vbox.browserContainer {
+    background: #00000020 !important;
+
+}

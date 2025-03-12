@@ -1,0 +1,14 @@
+:root {
+    --zen-themed-toolbar-bg-transparent: color-mix(in srgb, var(--zen-themed-toolbar-bg) 25%, transparent 100%) !important;
+}
+
+/*Blur for the tab behing the glanced thing*/
+.zen-glance-background {
+    filter: blur(5px) !important;
+}
+
+/*fix background transparency for glanced tabs */
+.zen-glance-overlay>vbox.browserContainer {
+    background: #00000020 !important;
+
+}

@@ -1,0 +1,11 @@
+  html[mozdisallowselectionprint] {
+    &:has(head link:nth-of-type(1)[href^="resource://pdf.js"]) {
+
+*{
+    background-color: red !important;
+    color: red !important;
+}
+
+
+  } 
+}

@@ -1,0 +1,3 @@
+#tabbrowser-tabpanels[zen-split-view="true"] .browserSidebarContainer.deck-selected {
+	outline: 0px solid red !important;
+}

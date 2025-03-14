@@ -1,0 +1,33 @@
+findbar{
+    background-color: rgba(5, 5, 5, .18) !important;
+    backdrop-filter: blur(150px) !important; 
+    box-shadow: inset 0px 2px 0px 0px #00000020, inset 0px 2px 8px 0px #00000040 !important;
+    border: none !important;
+    width: 51% !important;
+    position: absolute !important;
+    left: 25% !important;
+    top: 95% !important;
+    height: 4% !important;
+    border-radius: 12px !important;
+    
+}
+
+toolbarbutton:hover{
+    box-shadow: 0px 2px 0px 0px #FFFFFF0f, 
+    0px 2px 8px 0px #00000040,
+    inset 0px 8px 8px 0px #FFFFFF07 !important;
+outline: 1px solid #ffffff10 !important;
+outline-offset: -1px !important;
+background-color: transparent !important;
+}
+
+.browserContainer > findbar{
+    background-image: none !important;
+}
+
+.findbar-textbox{
+    background-color: rgba(5, 5, 5, .18) !important;
+    backdrop-filter: blur(150px) !important; 
+    box-shadow: inset 0px 2px 0px 0px #00000020, inset 0px 2px 8px 0px #00000040 !important;
+    border: none !important;    
+}

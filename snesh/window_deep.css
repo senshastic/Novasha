@@ -8,4 +8,12 @@
     .browserContainer {
         clip-path: inset(0 round 12px);
     }
+
+
+    /*Blur for the tab behing the glanced thing*/
+.zen-glance-background {
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter : blur(5px);
+}
+
     

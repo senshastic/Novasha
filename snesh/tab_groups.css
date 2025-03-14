@@ -6,7 +6,8 @@ tab-group{/*Remove the double slash from the front of this line to enable this t
     border-radius: calc(var(--border-radius-medium) + 0px) !important;
     margin-top: 2px !important;
     margin-bottom: 1px !important;
-    margin-inline: 1px !important;/*The distance between the tab group's border & the sidebar's edge*/    
+    margin-inline: 1px !important;/*The distance between the tab group's border & the sidebar's edge*/   
+    padding-right: 5px !important;
     & .tab-group-label-container{
       margin-inline: 2px !important;/*The distance between the folder ico and title/label text & the tab group's border*/
       width: 100%;

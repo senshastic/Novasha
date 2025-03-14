@@ -1,3 +1,20 @@
 #tabbrowser-tabpanels[zen-split-view="true"] .browserSidebarContainer.deck-selected {
 	outline: 0px solid red !important;
 }
+
+
+tab-group[split-view-group] {
+	& > .tabbrowser-tab {
+	  &:not(:last-child)::after {
+		content: '';
+		width: 1px;
+		height: 16px;
+		background-color:transparent !important;
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+	  }
+	}
+  }
+  

@@ -9,6 +9,12 @@ IMPORTANT: SET zen.view.experimental-rounded-view in about:config to true for ba
 
 /* ANCHOR [Panels] */
 
+
+.chromeclass-extrachrome{
+  background     : var(--zen-main-browser-background) !important;
+} 
+
+
 :root {
   --arrowpanel-background               : transparent !important;
   --theme-arrowpanel-background         : transparent !important;

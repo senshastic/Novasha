@@ -2,3 +2,10 @@
 /83a641f7-eca9-4c0f-91af-45627bef0539
 snesh/.DS_Store
 snesh/.DS_Store
+.vscode/*
+
+# Local History for Visual Studio Code
+.history/
+
+# Built Visual Studio Code Extensions
+*.vsix

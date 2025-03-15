@@ -50,6 +50,25 @@ IMPORTANT: SET zen.view.experimental-rounded-view in about:config to true for ba
       rgba(122, 2, 54, 0.95) 100%);
 }
 
+menupopup, panel {
+  &::part(content) {
+    
+    border: none !important;
+  }
+  
+}
+
+
+menupopup::part(content), panel::part(content) {
+   border: none !important;
+  
+} 
+
+.menupopup-arrowscrollbox{
+  border: none !important;
+}
+
+
 panel:not(#autoscroller),
 menupopup,
 #confirmation-hint {
@@ -65,10 +84,8 @@ menupopup,
   background-size      : 200px, cover, cover !important;
   color                : inherit !important;
   border-radius        : 12px !important;
-  border               : 1px solid rgba(208, 181, 117, 0.5) !important;
-  box-shadow           :
-    inset 0 0 12px rgba(255, 255, 255, 0.35),
-    inset 0 0 20px rgba(255, 255, 255, 0.20) !important;
+  border               : 0px solid rgba(208, 181, 117, 0.5) !important;
+  box-shadow: inset 0px 2px 0px 0px #00000020, inset 0px 2px 8px 0px #00000040 !important;
   overflow  : unset !important;
   z-index   : 9999 !important;
   opacity   : 0.99 !important;
@@ -82,7 +99,7 @@ menupopup,
   }
 }
 
-dialog:not(#window-modal-dialog) {
+.dialogBox {
   background:
     url("https://github.com/senshastic/fallsha-zen-mods/blob/main/assets/stardust.png?raw=true"),
     var(--gradient1),
@@ -91,10 +108,8 @@ dialog:not(#window-modal-dialog) {
   background-size      : 200px, cover, cover !important;
   color                : inherit !important;
   border-radius        : 12px !important;
-  border               : 1px solid rgba(208, 181, 117, 0.5) !important;
-  box-shadow           :
-    inset 0 0 12px rgba(255, 255, 255, 0.35),
-    inset 0 0 20px rgba(255, 255, 255, 0.20) !important;
+  border               : 0px solid rgba(208, 181, 117, 0.5) !important;
+  box-shadow: inset 0px 2px 0px 0px #00000020, inset 0px 2px 8px 0px #00000040 !important;
   overflow  : unset !important;
   z-index   : 9999 !important;
   opacity   : 0.99 !important;
@@ -124,6 +139,11 @@ dialog:not(#window-modal-dialog) {
     border-radius: 8px;
   }
 }
+
+slot:nth-child(1){
+   border: none !important;
+}
+
 
 input[type="email"],
 input[type="tel"],
@@ -196,4 +216,31 @@ html|textarea {
 
 button[part="dialog-button"] {
   color:#d0b575 !important;
+}
+
+notification-message{
+    background-color: rgba(5, 5, 5, .18) !important;
+    border-radius: 12px;
+    border: none !important;
+    box-shadow: inset 0px 2px 0px 0px #00000020, inset 0px 2px 8px 0px #00000040 !important;
+    backdrop-filter: blur(100px) saturate(110%);
+    -webkit-backdrop-filter: blur(100px);
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    padding: 5px;
+}
+
+#downloadsHistory{
+  border: none !important;
+          box-shadow: 0px 2px 0px 0px #FFFFFF0f, 
+              0px 2px 8px 0px #00000040,
+              inset 0px 8px 8px 0px #FFFFFF07 !important;
+  outline: 1px solid #ffffff10 !important;
+  outline-offset: -1px !important;
+  background-color: transparent !important;
+}
+
+#downloadsHistory:hover{
+      background-color: rgba(5, 5, 5, .18) !important;
+backdrop-filter: blur(150px) !important; 
+box-shadow: inset 0px 2px 0px 0px #00000020, inset 0px 2px 8px 0px #00000040 !important;
 }

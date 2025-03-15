@@ -1,3 +1,7 @@
+.chromeclass-extrachrome{
+    background     : var(--zen-main-browser-background) !important;
+  }
+
 #zen-sidebar-web-panel {
     position: relative;
     background-color: rgba(5, 5, 5, .18) !important;

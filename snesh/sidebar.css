@@ -1,4 +1,6 @@
-
+.chromeclass-extrachrome{
+  background     : var(--zen-main-browser-background) !important;
+}
 
 #sidebar-box {
   border: none !important;
@@ -59,7 +61,7 @@ display: none !important;
   
 
 
-  background-color: var(--zen-themed-toolbar-bg-transparent) !important;
+  background-color: transparent !important;
   backdrop-filter: blur(150px) !important; 
   box-shadow: inset 0px 2px 0px 0px #00000020, inset 0px 2px 8px 0px #00000040 !important;
   border-radius: 12px !important;

@@ -1,150 +1,116 @@
-@keyframes glass-disappear {
-  0% {
-    backdrop-filter: blur(5px);
-  }
 
-  99% {
-    backdrop-filter: blur(5px);
-  }
 
-  100% {
-    backdrop-filter: none;
+#sidebar-box {
+  border: none !important;
+  box-shadow: none !important;
+
+
+  #sidebar-header {
+    border-bottom: none !important;
   }
 }
 
 
-  /*noinspection CssUnknownProperty*/
-  #sidebar-box {
-    border: none !important;
-    box-shadow: none !important;
+:root[lwt-sidebar] {
+background: transparent !important;
+color: var(--lwt-sidebar-text-color);
+scrollbar-color: light-dark( rgba(204,204,204,.5), rgba(249,249,250,.4) ) light-dark( rgba(230,230,235,.5), rgba(20,20,25,.3) );
+color-scheme: light;
+}
+
+/* this is now useless */ 
+
+#sidebar-reverse-position{
+display: none !important;
+}
+
+#sidebarMenu-popup > menuseparator:nth-child(7){
+display: none !important;
+}
+
+#sidebar-splitter {
+  display: none;
+}
+
+#sidebar-box {
+  position: absolute;
+  height: calc(100% - 4rem);
+  min-width: 10rem !important;
+  min-height: 180px !important;
+  max-height: calc(100% - 2rem);
+  left: 1rem;
+  margin-top: var(--natsumi-sidebar-y-offset);
+  z-index: 999;
+  opacity: 1;
+  transition: left 0.2s ease, right 0.2s ease, opacity 0.2s ease !important;
 
 
-    /*noinspection CssUnknownProperty*/
+    margin-top: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+  
+
+
+    margin-top: 0;
+    margin-bottom: 20px !important;
+    top: unset;
+    transform: unset;
+    bottom: 0;
+  
+
+
+  background-color: var(--zen-themed-toolbar-bg-transparent) !important;
+  backdrop-filter: blur(150px) !important; 
+  box-shadow: inset 0px 2px 0px 0px #00000020, inset 0px 2px 8px 0px #00000040 !important;
+  border-radius: 12px !important;
+  
+  border: none !important; 
+  
     #sidebar-header {
-      border-bottom: none !important;
+      margin-left: 8px;
+      margin-right: 8px;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      border-bottom: 1px solid light-dark(rgba(20, 20, 20, 0.2), rgba(235, 235, 235, 0.3)) !important;
     }
-  }
+  
 
-  /* Force background to be transparent */
-  .sidebar-panel {
-    background: transparent !important;
-  }
+ 
+    resize: horizontal;
+  
 
-
-
-  #sidebar-splitter {
-    display: none;
-  }
-
-  /*noinspection CssInvalidFunction*/
-  #sidebar-box {
-    position: absolute;
-    height: calc(100% - 40px);
-    min-width: 180px !important;
-    min-height: 180px !important;
-    max-width: calc(100% - calc(var(--natsumi-sidebar-x-offset) * 2));
-    max-height: calc(100% - calc(var(--natsumi-sidebar-y-offset) * 2));
-    left: var(--natsumi-sidebar-x-offset);
-    margin-top: var(--natsumi-sidebar-y-offset);
-    z-index: 999;
-    opacity: 1;
-    transition: left 0.2s ease, right 0.2s ease, opacity 0.2s ease !important;
-
-    @media (-moz-bool-pref: "natsumi.sidebar.panel-position-center") {
-      margin-top: 0;
-      top: 50%;
-      transform: translate(0, -50%);
-    }
+  &[hidden] {
+    display: flex;
+    left: calc(var(--natsumi-sidebar-x-offset) - 20px);
+    opacity: 0;
+    pointer-events: none !important;
+    animation: glass-disappear 0.2s linear !important;
+    animation-fill-mode: forwards !important;
 
 
-      margin-top: 0;
-      margin-bottom: 20px !important;
-      top: unset;
-      transform: unset;
-      bottom: 0;
-    
-
-
-      background-color: var(--natsumi-glass-background) !important;
-      backdrop-filter: blur(var(--natsumi-glass-blur-radius));
-      border: 1px solid light-dark(rgba(20, 20, 20, 0.2), rgba(235, 235, 235, 0.3)) !important;
-
-      /*noinspection CssInvalidFunction*/
-      @media not (-moz-bool-pref: "natsumi.theme.disable-glass-shadow") {
-        box-shadow: 0 0 var(--natsumi-glass-shadow-size) var(--natsumi-glass-shadow-color) !important;
-      }
-
-      /*noinspection CssInvalidFunction*/
-      #sidebar-header {
-        margin-left: 8px;
-        margin-right: 8px;
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-        border-bottom: 1px solid light-dark(rgba(20, 20, 20, 0.2), rgba(235, 235, 235, 0.3)) !important;
-      }
-    
-
-   
-      resize: both;
-    
-
-    &[hidden] {
-      display: flex;
-      left: calc(var(--natsumi-sidebar-x-offset) - 20px);
-      opacity: 0;
-      pointer-events: none !important;
-      animation: glass-disappear 0.2s linear !important;
-      animation-fill-mode: forwards !important;
-
-
-        left: auto;
-        right: calc(var(--natsumi-sidebar-x-offset) - 20px);
-      
-    }
-  }
-
-
-      #browser:has(#sidebar-box:not([hidden])) .deck-selected browser {
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-      }
-    
-
-
-/* ==== Tabs sidebar tweaks ==== */
-
-
-  :root[zen-compact-mode="true"]:not([customizing]) {
-    /*noinspection CssInvalidFunction*/
-
-      #navigator-toolbox:not([animate]) {
-        #titlebar {
-          background: var(--natsumi-glass-background) !important;
-          border: 1px solid light-dark(rgba(20, 20, 20, 0.2), rgba(235, 235, 235, 0.3)) !important;
-          backdrop-filter: blur(var(--natsumi-glass-blur-radius)) !important;
-
-          /*noinspection CssInvalidFunction*/
-
-            box-shadow: 0 0 var(--natsumi-glass-shadow-size) var(--natsumi-glass-shadow-color) !important;
-
-        }
-
-        #tabbrowser-arrowscrollbox-periphery::before{
-          background: light-dark(rgba(20, 20, 20, 0.2), rgba(235, 235, 235, 0.3)) !important;
-        }
-
-
-        /*noinspection CssInvalidFunction*/
-
-          #TabsToolbar-customization-target::after {
-            background: light-dark(rgba(20, 20, 20, 0.2), rgba(235, 235, 235, 0.3)) !important;
-          }
-        
-      }
-
-
-        #browser:has(#navigator-toolbox:is([zen-has-hover], [zen-user-show])) .deck-selected browser {
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-        }
-      
+      left: auto;
+      right: calc(var(--natsumi-sidebar-x-offset) - 20px);
     
   }
+}
+
+
+treechildren::-moz-tree-cell(hover){
+ 
+  background-color: transparent !important;
+ margin-left: 10px !important;
+ transition: margin-left 0.2s ease;
+
+}
+
+treechildren::-moz-tree-row(hover){
+
+background-color: transparent !important;
+
+
+}
+
+
+
+  
+

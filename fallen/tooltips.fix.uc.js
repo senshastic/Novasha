@@ -29,29 +29,14 @@
     `;
 	//deep
 	const css2 = /* css */ `
-tooltip {
-    position: relative !important;
-    background-color: transparent !important;
-    border: none !important;
-    padding: 5px !important;
-    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out !important;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-}
-
-tooltip::before {
-    content: "" !important;
-    position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
-    bottom: 0 !important;
-    z-index: -1 !important;
-    background-color: rgba(5, 5, 5, .18) !important;
-    backdrop-filter: blur(150px) !important;
-    box-shadow: inset 0px 2px 0px 0px #00000020, inset 0px 2px 8px 0px #00000040 !important;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-}
-`;
+    tooltip {
+        border-radius   : 12px !important;
+        transition      : background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        padding         : 5px;
+        border          : none !important;
+        background-color: rgba(5, 5, 5, 0.88) !important;
+        box-shadow      : inset 0px 2px 0px 0px #00000020, inset 0px 2px 8px 0px #00000040 !important;    }
+    `;
 	//elevated
 	const css3 = /* css */ `
     tooltip {
@@ -64,16 +49,13 @@ tooltip::before {
             border          : none !important;
             padding         : 5px !important;
             transition      : background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out !important;
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     }
     `;
-
 	var sss = Cc["@mozilla.org/content/style-sheet-service;1"].getService(
 		Ci.nsIStyleSheetService
 	);
 	var uri = makeURI(
-		"data:text/css;charset=UTF=8," + encodeURIComponent(css2)
+		"data:text/css;charset=UTF=8," + encodeURIComponent(css1)
 	);
-
 	sss.loadAndRegisterSheet(uri, sss.AGENT_SHEET);
 })();

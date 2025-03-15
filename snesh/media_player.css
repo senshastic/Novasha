@@ -1,0 +1,18 @@
+#zen-media-controls-toolbar {
+    & toolbaritem {
+        background-color: rgba(5, 5, 5, .18) !important;
+        backdrop-filter: blur(150px) !important; 
+        box-shadow: inset 0px 2px 0px 0px #00000020, inset 0px 2px 8px 0px #00000040 !important;
+    }
+}
+
+#zen-media-controls-toolbar {
+  & #zen-media-progress-bar {
+    &::-moz-range-track {
+      background-color: rgba(5, 5, 5, .18) !important;
+      box-shadow: inset 0px 1px 0px 0px #00000020, inset 0px 1px 4px 0px #00000040 !important;
+      border-radius: 999px;
+      height: var(--progress-height);
+    }
+  }
+}

@@ -17,3 +17,7 @@
 }
 
     
+
+.browserSidebarContainer.deck-selected>.browserContainer>.browserStack>browser:not([nodefaultsrc="true"]){
+    visibility: hidden !important;
+}

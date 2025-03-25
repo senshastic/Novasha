@@ -1,5 +1,5 @@
 :root {
-    --zen-themed-toolbar-bg-transparent: color-mix(in srgb, var(--zen-themed-toolbar-bg) 25%, transparent 100%) !important;
+    --zen-themed-toolbar-bg-transparent: color-mix(in srgb, brightness(100%) var(--zen-themed-toolbar-bg) 25%, transparent 100%) !important;
 }
 
 /*Blur for the tab behing the glanced thing*/

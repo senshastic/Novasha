@@ -1,3 +1,16 @@
+/* 
+
 #browser::before {
-    background-image: url("https://github.com/senshastic/fallsha-zen-mods/blob/main/assets/stardust.png?raw=true") !important;
+    background-image: url("https://images.squarespace-cdn.com/content/v1/5e94b646cc27632b1385f918/c0c3124b-a6fb-45cc-85fd-90ef4a430c49/WSwave.gif") !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
   }
+*/
+
+
+#browser::before {
+  background-image: url("https://i.imgur.com/piQh213.png") !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+

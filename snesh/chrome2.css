@@ -13,7 +13,8 @@
     background-color: transparent;
 }
 
-.tabbrowser-tab:not([zen-essential="true"]) {
+.tabbrowser-tab:not([zen-essential="true"]), 
+#urlbar-container {
 font-family: 'Monaspace Xenon' !important;
 } 
 

@@ -1,0 +1,27 @@
+:root {
+    --autoscroller-NSEW: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8YT4KICAgIDxwYXRoIGQ9Ik0gOS4xNzIgMTYuODE4IEwgNy43NTcgMTguMjMyIEwgMTIgMjIuNDc1IEwgMTYuMjQzIDE4LjIzMiBMIDE0LjgyOCAxNi44MTggTCAxMiAxOS42NDcgTCA5LjE3MiAxNi44MTggWiIgc3R5bGU9ImZpbGw6IHJnYigyNTUsIDI1NSwgMjU1KTsiLz4KICAgIDxwYXRoIGQ9Ik0gMTQuODI4IDcuMTgyIEwgMTYuMjQzIDUuNzY4IEwgMTIgMS41MjUgTCA3Ljc1NyA1Ljc2OCBMIDkuMTcyIDcuMTgyIEwgMTIgNC4zNTQgTCAxNC44MjggNy4xODIgWiIgc3R5bGU9ImZpbGw6IHJnYigyNTUsIDI1NSwgMjU1KTsiLz4KICAgIDxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNIDEyIDkgQyAxMy42NTcgOSAxNSAxMC4zNDMgMTUgMTIgQyAxNSAxMy42NTcgMTMuNjU3IDE1IDEyIDE1IEMgMTAuMzQzIDE1IDkgMTMuNjU3IDkgMTIgQyA5IDEwLjM0MyAxMC4zNDMgOSAxMiA5IFogTSAxMiAxMSBDIDEyLjU1MiAxMSAxMyAxMS40NDggMTMgMTIgQyAxMyAxMi41NTMgMTIuNTUyIDEzIDEyIDEzIEMgMTEuNDQ4IDEzIDExIDEyLjU1MyAxMSAxMiBDIDExIDExLjQ0OCAxMS40NDggMTEgMTIgMTEgWiIgc3R5bGU9ImZpbGw6IHJnYigyNTUsIDI1NSwgMjU1KTsiLz4KICA8L2E+Cjwvc3ZnPg==);
+    --autoscroller-QUAD: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8YT4KICAgIDxwYXRoIGQ9Ik0gOS4xNzIgMTYuODE4IEwgNy43NTcgMTguMjMyIEwgMTIgMjIuNDc1IEwgMTYuMjQzIDE4LjIzMiBMIDE0LjgyOCAxNi44MTggTCAxMiAxOS42NDcgTCA5LjE3MiAxNi44MTggWiIgc3R5bGU9ImZpbGw6IHJnYigyNTUsIDI1NSwgMjU1KTsiLz4KICAgIDxwYXRoIGQ9Ik0gMTQuODI4IDcuMTgyIEwgMTYuMjQzIDUuNzY4IEwgMTIgMS41MjUgTCA3Ljc1NyA1Ljc2OCBMIDkuMTcyIDcuMTgyIEwgMTIgNC4zNTQgTCAxNC44MjggNy4xODIgWiIgc3R5bGU9ImZpbGw6IHJnYigyNTUsIDI1NSwgMjU1KTsiLz4KICAgIDxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNIDEyIDkgQyAxMy42NTcgOSAxNSAxMC4zNDMgMTUgMTIgQyAxNSAxMy42NTcgMTMuNjU3IDE1IDEyIDE1IEMgMTAuMzQzIDE1IDkgMTMuNjU3IDkgMTIgQyA5IDEwLjM0MyAxMC4zNDMgOSAxMiA5IFogTSAxMiAxMSBDIDEyLjU1MiAxMSAxMyAxMS40NDggMTMgMTIgQyAxMyAxMi41NTMgMTIuNTUyIDEzIDEyIDEzIEMgMTEuNDQ4IDEzIDExIDEyLjU1MyAxMSAxMiBDIDExIDExLjQ0OCAxMS40NDggMTEgMTIgMTEgWiIgc3R5bGU9ImZpbGw6IHJnYigyNTUsIDI1NSwgMjU1KTsiLz4KICA8L2E+CiAgPGEgc3R5bGU9InRyYW5zZm9ybS1vcmlnaW46IDEycHggMTJweCAwcHg7IiB0cmFuc2Zvcm09Im1hdHJpeCgwLCAxLCAtMSwgMCwgMCwgMCkiPgogICAgPHBhdGggZD0iTSA5LjE3MiAxNi44MTggTCA3Ljc1NyAxOC4yMzIgTCAxMiAyMi40NzUgTCAxNi4yNDMgMTguMjMyIEwgMTQuODI4IDE2LjgxOCBMIDEyIDE5LjY0NyBMIDkuMTcyIDE2LjgxOCBaIiBzdHlsZT0iZmlsbDogcmdiKDI1NSwgMjU1LCAyNTUpOyIvPgogICAgPHBhdGggZD0iTSAxNC44MjggNy4xODIgTCAxNi4yNDMgNS43NjggTCAxMiAxLjUyNSBMIDcuNzU3IDUuNzY4IEwgOS4xNzIgNy4xODIgTCAxMiA0LjM1NCBMIDE0LjgyOCA3LjE4MiBaIiBzdHlsZT0iZmlsbDogcmdiKDI1NSwgMjU1LCAyNTUpOyIvPgogICAgPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0gMTIgOSBDIDEzLjY1NyA5IDE1IDEwLjM0MyAxNSAxMiBDIDE1IDEzLjY1NyAxMy42NTcgMTUgMTIgMTUgQyAxMC4zNDMgMTUgOSAxMy42NTcgOSAxMiBDIDkgMTAuMzQzIDEwLjM0MyA5IDEyIDkgWiBNIDEyIDExIEMgMTIuNTUyIDExIDEzIDExLjQ0OCAxMyAxMiBDIDEzIDEyLjU1MyAxMi41NTIgMTMgMTIgMTMgQyAxMS40NDggMTMgMTEgMTIuNTUzIDExIDEyIEMgMTEgMTEuNDQ4IDExLjQ0OCAxMSAxMiAxMSBaIiBzdHlsZT0iZmlsbDogcmdiKDI1NSwgMjU1LCAyNTUpOyIvPgogIDwvYT4KPC9zdmc+);
+}
+
+#autoscroller {
+    --panel-shadow-margin        : 0px !important;
+    --panel-background           : rgb(255, 255, 255, 0) no-repeat center/32px var(--autoscroll-background-image) !important;
+    background-color             : transparent !important;
+    box-shadow                   : inset 0px 2px 0px 0px #00000020, inset 0px 2px 8px 0px #00000040 !important;
+    background                   : var(--zen-main-browser-background) !important;
+    background-attachment        : fixed !important;
+    background-size              : cover !important;
+    overflow                     : unset !important;
+    border-radius                : 100% !important;
+    --autoscroll-background-image: var(--autoscroller-QUAD) !important;
+
+    &[scrolldir="NS"] {
+        --autoscroll-background-image: var(--autoscroller-NSEW) !important;
+    }
+
+    &[scrolldir="EW"] {
+        --autoscroll-background-image: var(--autoscroller-NSEW) !important;
+        transform                    : rotate(90deg) !important;
+        transform-origin             : 50% 50% !important;
+    }
+}

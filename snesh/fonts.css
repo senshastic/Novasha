@@ -1,0 +1,11 @@
+
+
+.tabbrowser-tab:not([zen-essential="true"]), 
+#urlbar-container, tab-group {
+font-family: 'Monaspace Xenon' !important;
+} 
+
+
+.zen-current-workspace-indicator {
+    font-family: 'CC Wild Words' !important;
+}

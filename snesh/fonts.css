@@ -1,7 +1,10 @@
 
 
 .tabbrowser-tab:not([zen-essential="true"]), 
-#urlbar-container, tab-group {
+#urlbar-container, tab-group, 
+panel:not(#autoscroller),
+menupopup,
+#confirmation-hint {
 font-family: 'Monaspace Xenon' !important;
 } 
 

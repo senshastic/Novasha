@@ -21,3 +21,9 @@
 .browserSidebarContainer.deck-selected>.browserContainer>.browserStack>browser:not([nodefaultsrc="true"]){
     visibility: hidden !important;
 }
+
+/* fix bleed when changing workspaces */
+
+.zen-workspace-tabs-section:not([active="true"]){
+    display: none !important;
+}

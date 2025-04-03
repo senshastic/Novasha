@@ -69,25 +69,26 @@ menupopup::part(content), panel::part(content) {
 
 panel:not(#autoscroller),
 menupopup,
-#confirmation-hint {
-  --panel-background     : rgba(88, 88, 88, 0) !important;
-  --panel-shadow-margin  : 0px !important;
-  --panel-border-radius  : 12px !important;
-  background             :
-    url("https://github.com/senshastic/fallsha-zen-mods/blob/main/assets/stardust.png?raw=true"),
-    var(--arrowpanel-background),
-    linear-gradient(120deg, rgba(15, 25, 50, .95) 0%, rgba(25, 60, 100, .95) 50%, rgba(50, 10, 80, .95) 100%) !important;
-  background-attachment: fixed, fixed, fixed !important;
-  background-size      : 200px, cover, cover !important;
-  color                : inherit !important;
-  border-radius        : 12px !important;
-  border               : 0px solid rgba(208, 181, 117, 0.5) !important;
+#confirmation-hint, 
+.dialogBox {
+  backdrop-filter: blur(150px) !important; 
   box-shadow: inset 0px 2px 0px 0px #00000020, inset 0px 2px 8px 0px #00000040 !important;
-  overflow  : unset !important;
-  z-index   : 9999 !important;
-  opacity   : 0.99 !important;
-  /* Slightly reduced transparency for clarity */
-  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border: none !important;
+  }
+
+panel::before, 
+.dialogBox::before,
+#confirmation-hint::before, 
+menupopup::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: var(--zen-main-browser-background);
+  opacity: 0.7;
+  z-index: -1;
 }
 
 @media (-moz-platform: macos) {
@@ -96,23 +97,6 @@ menupopup,
   }
 }
 
-.dialogBox {
-  background:
-    url("https://github.com/senshastic/fallsha-zen-mods/blob/main/assets/stardust.png?raw=true"),
-    var(--arrowpanel-background),
-    linear-gradient(120deg, rgba(15, 25, 50, .95) 0%, rgba(25, 60, 100, .95) 50%, rgba(50, 10, 80, .95) 100%) !important;
-  background-attachment: fixed, fixed, fixed !important;
-  background-size      : 200px, cover, cover !important;
-  color                : inherit !important;
-  border-radius        : 12px !important;
-  border               : 0px solid rgba(208, 181, 117, 0.5) !important;
-  box-shadow: inset 0px 2px 0px 0px #00000020, inset 0px 2px 8px 0px #00000040 !important;
-  overflow  : unset !important;
-  z-index   : 9999 !important;
-  opacity   : 0.99 !important;
-  /* Slightly reduced transparency for clarity */
-  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
 
 #PanelUI-zen-profiles-header,
 #PanelUI-zen-profiles-user-picture {

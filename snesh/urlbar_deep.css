@@ -6,7 +6,7 @@
 }
 
 #urlbar{
-  background     : var(--zen-main-browser-background) !important;
+  background: color-mix(in srgb, var(--zen-main-browser-background) 70%, transparent) !important;
   backdrop-filter: blur(150px) !important; 
   box-shadow: inset 0px 2px 0px 0px #00000020, inset 0px 2px 8px 0px #00000040 !important;
 }
@@ -51,3 +51,5 @@
     z-index: -1;
   }
 }
+
+

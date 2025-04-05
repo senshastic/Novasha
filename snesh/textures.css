@@ -4,7 +4,7 @@
 }
 
 #browser::before {
-  background-image : var(--stardust_new) !important;
+  background-image : url("https://github.com/senshastic/Fallsha-Jankyard/blob/main/assets/cutiesestPatootiestFixed.png?raw=true") !important;
   background-repeat: no-repeat !important;
   background-size  : cover !important;
 }

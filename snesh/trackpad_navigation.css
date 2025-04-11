@@ -1,0 +1,85 @@
+:root {
+    --blur-max: 8px;               /* Maximum blur amount */
+    --blur-duration: 0.4s;         /* Duration of blur animation */
+    --zoom-out-factor: 0.95;       /* Zoom factor for pages disappearing (smaller = more zoom effect) */
+    --transition-timing: cubic-bezier(0.175, 0.885, 0.32, 1.275);  /* Slightly bouncy zoom */
+  }
+  
+  /* Define animation for zoom out with blur */
+  @keyframes zoomBlurOut {
+    0% {
+      filter: blur(0);
+      opacity: 1;
+      transform: scale(1);
+    }
+    100% {
+      filter: blur(var(--blur-max));
+      opacity: 0.7;
+      transform: scale(var(--zoom-out-factor));
+    }
+  }
+  
+  /* Define animation for page appearing with zoom in */
+  @keyframes zoomBlurIn {
+    0% {
+      filter: blur(var(--blur-max));
+      opacity: 0.7;
+      transform: scale(0.85); 
+    }
+    70% {
+      filter: blur(2px);
+      opacity: 0.95;
+      transform: scale(1.02); 
+    }
+    100% {
+      filter: blur(0);
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* Base styles for the browser element */
+  .browserStack browser {
+    transition: all 0.3s ease-out !important;
+    position: relative;
+    backface-visibility: hidden;      /* Reduces flickering during animations */
+    transform-style: preserve-3d;     /* Better performance for 3D transforms */
+    will-change: transform, filter, opacity; /* Optimizes performance */
+    transform-origin: center center;
+  }
+  
+  /* Previous page animation - zoom out with blur */
+  .browserStack:has(#historySwipeAnimationPreviousArrow:not([style="translate: none;"])) browser {
+    animation: zoomBlurOut var(--blur-duration) var(--transition-timing) forwards;
+  }
+  
+  /* Next page animation - zoom out with blur */
+  .browserStack:has(#historySwipeAnimationNextArrow:not([style="translate: none;"])) browser {
+    animation: zoomBlurOut var(--blur-duration) var(--transition-timing) forwards;
+  }
+  
+  /* Create overlay for "page appearing" animations */
+  .browserStack browser::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: -1;
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  /* Fix for page appearing animations */
+  .browserStack:has(#historySwipeAnimationPreviousArrow[style="translate: none;"]) browser,
+  .browserStack:has(#historySwipeAnimationNextArrow[style="translate: none;"]) browser {
+    animation: zoomBlurIn calc(var(--blur-duration) * 1.25) var(--transition-timing) forwards;
+  }
+  
+  /* Enhance blur during transitions */
+  .browserStack:has(#historySwipeAnimationPreviousArrow:not([style="translate: none;"])) browser,
+  .browserStack:has(#historySwipeAnimationNextArrow:not([style="translate: none;"])) browser {
+    filter: blur(var(--blur-max)) saturate(1.05) brightness(0.97) !important;
+  }

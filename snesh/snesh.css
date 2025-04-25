@@ -17,5 +17,37 @@
 }
 
 
+/* funny flip animations for images */ 
+.tab-icon-image {
+  transition: transform 0.6s ease;
+  transform-style: preserve-3d; /* Enables 3D transformations */
+}
+
+.tab-icon-image:hover {
+  animation: flipAndScale 0.6s forwards;
+}
+
+@keyframes flipAndScale {
+  from {
+      transform: rotateY(0deg) scale(1);
+  }
+  to {
+      transform: rotateY(360deg) scale(1.5);
+  }
+}
+
+/* current twilight sound animation for tabs */ 
+
+
+[aria-label="Mute tab"] .button-background  {
+	background-image: url('https://github.com/senshastic/fallsha-zen-customizations/blob/main/assets/meow%20party.gif?raw=true') !important;
+	fill: none !important;
+  }
+
+[aria-label="Unmute tab"] .button-background{
+  
+	background-image: url('https://github.com/senshastic/fallsha-zen-customizations/blob/main/assets/meow%20not%20party.png?raw=true') !important;
+	fill: none !important;
+}
 
 

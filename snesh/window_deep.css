@@ -22,8 +22,8 @@
     visibility: hidden !important;
 }
 
-/* fix bleed when changing workspaces */
 
-.zen-workspace-tabs-section:not([active="true"]){
+.zen-workspace-tabs-section:not([active="true"],.zen-essentials-container){
     display: none !important;
 }
+

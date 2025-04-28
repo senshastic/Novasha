@@ -19,10 +19,28 @@
 }
 
 /* Hover states for tabs */
-.tab-background:hover,
-.tab-stack:hover:has(.tab-background) .tab-background,
+.tabbrowser-tab:not([zen-essential="true"]) .tab-background:hover,
+.tabbrowser-tab:not([zen-essential="true"]) .tab-stack:hover:has(.tab-background) .tab-background,
 #zen-essentials-container:has(.tab-background) .tabbrowser-tab:hover .tab-background {
   box-shadow: 0px 2px 0px 0px #FFFFFF0F, 
+              0px 2px 8px 0px #00000040,
+              inset 0px 8px 8px 0px #FFFFFF07 !important;
+  outline: 1px solid #FFFFFF10 !important;
+  outline-offset: -1px !important;
+  background-color: transparent !important;
+}
+
+.tabbrowser-tab[zen-essential="true"] .tab-background:hover, 
+.tabbrowser-tab[zen-essential="true"] .tab-stack:hover:has(.tab-background) .tab-background { 
+  background-color: rgba(5, 5, 5, .18) !important;
+backdrop-filter: blur(150px) !important; 
+box-shadow: inset 0px 2px 0px 0px #00000020, inset 0px 2px 8px 0px #00000040 !important;
+
+} 
+
+
+.tabbrowser-tab[zen-essential="true"] .tab-stack:has(.tab-background) .tab-background{
+   box-shadow: 0px 2px 0px 0px #FFFFFF0F, 
               0px 2px 8px 0px #00000040,
               inset 0px 8px 8px 0px #FFFFFF07 !important;
   outline: 1px solid #FFFFFF10 !important;
@@ -83,3 +101,13 @@
   transition: margin-left 0.4s ease;
   background-color: transparent;
 }
+
+
+/* glowy box shadow for essentials hover */ 
+    .tabbrowser-tab[zen-essential="true"]:hover .tab-icon-image{
+      filter:
+        drop-shadow(0 0 0.5px #fff)
+        drop-shadow(0 0 1px #fff) !important;
+    }
+  
+

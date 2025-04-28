@@ -27,6 +27,24 @@
     padding: 5px;
 
 }
+
+
+.tab-icon-stack[soundplaying]::after {
+      content: '';
+    position: absolute;
+    width: 110%;
+    height: 110%;
+    background-repeat: no-repeat;
+    opacity: 1;
+    background: url('chrome://browser/content/zen-images/note-indicator.svg') no-repeat;
+    top: -150%;
+    left: 130%;
+    transform: translateX(-50%);
+    z-index: 3;
+    pointer-events: none;
+    transition: opacity 0.8s ease;
+}
+
     
     .tab-icon-overlay[muted] {
         list-style-image: url('https://github.com/senshastic/fallsha-zen-customizations/blob/main/assets/meow%20not%20party.png?raw=true') !important;
@@ -40,5 +58,36 @@
         padding: 5px;
     
     } 
+
+/* current twilight sound animation for tabs */ 
+
+
+[aria-label="Mute tab"] .button-background  {
+	background-image: url('https://github.com/senshastic/fallsha-zen-customizations/blob/main/assets/meow%20party.gif?raw=true') !important;
+	fill: none !important;
+ 
+  }
+
+[aria-label="Mute tab"] .button-background::after{
+      content: '';
+    position: absolute;
+    width: 110%;
+    height: 110%;
+    background-repeat: no-repeat;
+    opacity: 1;
+    background: url('chrome://browser/content/zen-images/note-indicator.svg') no-repeat;
+    top: -70%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+    pointer-events: none;
+    transition: opacity 0.8s ease;
+}
+
+[aria-label="Unmute tab"] .button-background{
+  
+	background-image: url('https://github.com/senshastic/fallsha-zen-customizations/blob/main/assets/meow%20not%20party.png?raw=true') !important;
+	fill: none !important;
+}
 
 

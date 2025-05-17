@@ -22,9 +22,3 @@
     visibility: hidden !important;
 }
 
-
-.zen-workspace-tabs-section:not([active="true"],.zen-essentials-container){
-    display: none !important;
-}
-
-

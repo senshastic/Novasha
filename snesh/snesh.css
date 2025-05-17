@@ -7,15 +7,18 @@
 
 #zen-workspaces-button {
   position: absolute !important;
-  top: calc(24.5rem - 100vh) !important;
+  top: calc(24rem - 100vh) !important;
   width: 100% !important;
   left: 0 !important;
+  padding-top: 1rem !important;
 }
 
 #zen-current-workspace-indicator-container {
-  margin-bottom: 6.5rem !important;
+  margin-bottom: 8rem !important;
 }
-
+.zen-workspace-tabs-section.zen-current-workspace-indicator{
+    margin-bottom: 3rem !important;
+}
 
 /* funny flip animations for images */ 
 .tabbrowser-tab:not([zen-essential="true"]) .tab-icon-image {

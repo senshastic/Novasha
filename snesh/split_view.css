@@ -7,8 +7,6 @@ tab-group[split-view-group] {
 	& > .tabbrowser-tab {
 	  &:not(:last-child)::after {
 		content: '';
-		width: 1px;
-		height: 16px;
 		background-color:transparent !important;
 		position: absolute;
 		right: 0;
@@ -18,3 +16,18 @@ tab-group[split-view-group] {
 	}
   }
   
+tab-group[split-view-group="true"]{
+	height: 0rem !important;
+}
+
+tab-group[split-view-group="true"] .tabbrowser-tab[aria-posinset="1"] {
+	width: 50% !important;
+	height: 150% !important;
+	bottom: 50% !important;
+}
+
+tab-group[split-view-group="true"] .tabbrowser-tab[aria-posinset="2"] {
+	width: 50% !important;
+	bottom: 150% !important;
+	left: 50% !important;
+}

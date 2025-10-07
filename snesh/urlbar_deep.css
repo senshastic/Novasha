@@ -1,6 +1,7 @@
 
 
-#urlbar-background {
+#urlbar-background,
+.urlbar-background {
   background-color:transparent !important;
   
 }

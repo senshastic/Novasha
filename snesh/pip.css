@@ -299,4 +299,9 @@
   body:fullscreen #controls #controls-bottom #fullscreen {
     background-image: url("chrome://browser/skin/zen-icons/fullscreen-exit.svg") !important;
   }
+  
+  html{
+    border-radius: 120px !important;
+  }
+
 }
